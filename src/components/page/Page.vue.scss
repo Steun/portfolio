@@ -1,0 +1,71 @@
+.about {
+  @extend %absolute;
+  display: none;
+  height: 100vh;
+}
+
+.side-menu {
+
+  $bg: $porcelain;
+  $inner-offset: 3vw;
+  $font-size: 2vh;
+
+  @extend %absolute;
+  width: $side-menu-width;
+  height: 100vh;
+  background: $bg;
+
+  .name {
+    font-size: $font-size;
+    color: $primary-accent;
+    padding: 1vh 0;
+  }
+
+  .menu-container {
+    @extend %absolute;
+    left: $inner-offset;
+
+    .item {
+      padding: .7vh 0;
+
+      a {
+        display: block;
+        font-size: $font-size;
+        color: $clay;
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.page {
+
+  background: url('./projects/compilex-laptop.jpg');
+  background-size: cover;
+
+  @extend %absolute;
+  height: 100vh;
+  width: 100vw;
+
+  .title-box {
+    @extend %absolute;
+    top: 8vh;
+    left: calc(#{$side-menu-width} + 8vw);
+  }
+
+  .button-box {
+    @extend %absolute;
+    bottom: 6vh;
+    right: 6vw;
+    left: auto;
+    top: auto;
+    display: inline-block;
+  }
+}
+
