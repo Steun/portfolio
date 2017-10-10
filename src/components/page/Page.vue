@@ -2,7 +2,8 @@
   <div id="container">
 
     <div class="about">
-
+      <h3 class="title">Hello,</h3>
+      <h3 class="title">Is it me you're looking for?</h3>
     </div>
 
     <div class="page">
@@ -28,6 +29,7 @@
           <li class="item"><a href="#">Lift</a></li>
           <li class="item"><a href="#">Project P</a></li>
           <li class="item"><a href="#">Compilex</a></li>
+          <li class="item"><a @click="openAbout()" href="#">About</a></li>
         </ul>
       </div>
     </nav>
