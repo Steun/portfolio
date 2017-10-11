@@ -4,7 +4,6 @@ module.exports = {
   root: true,
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 6,
     sourceType: 'module'
   },
   env: {
@@ -18,10 +17,14 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
+    // Enforce trailing ;'s
+    // "semi": [2, "never"],
+    // enforce consistent spacing before function definition opening parenthesis
+    'space-before-function-paren': 0,
+    // Add a space after keywords
+    'keyword-spacing': 1,
     // allow paren-less arrow functions
     'arrow-parens': 0,
-    // Enforce no semicolons at line end
-    'semi': 2,
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
