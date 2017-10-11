@@ -4,6 +4,14 @@
     <div class="about">
       <h3 class="title">Hello,</h3>
       <h3 class="title">Is it me you're looking for?</h3>
+      <p class="description">
+        I’m a Frontend developer based in Haarlem, currently in my first year of Software Engineering at HvA.
+      </p>
+      <ul class="socials inline">
+        <li><a href="mailto:contact@teunkelting.com" class="link">email</a></li>
+        <li><a href="https://twitter.com/teunkelting" class="link">twitter</a></li>
+        <li><a href="#" class="link">linkedin</a></li>
+      </ul>
     </div>
 
     <div class="page">
