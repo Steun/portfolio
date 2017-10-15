@@ -1,5 +1,5 @@
 <template>
-  <nav class="side-menu">
+  <nav id="menu">
 
     <div class="menu-container">
 

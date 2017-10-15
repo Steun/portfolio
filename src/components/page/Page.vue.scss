@@ -1,4 +1,4 @@
-.about {
+#about {
   @extend %absolute;
   @extend %no-flick;
 
@@ -38,7 +38,7 @@
   }
 }
 
-.page {
+#page {
 
   background: url('./projects/compilex-laptop.jpg');
   background-size: cover;

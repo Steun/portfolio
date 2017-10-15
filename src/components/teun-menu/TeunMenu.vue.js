@@ -1,42 +1,85 @@
 import anime from 'animejs'
 
-let aboutClosed = {
-  targets: '#container .about',
-  translateX: 0,
-  duration: 650,
-  easing: 'easeInOutQuad'
-}
-let aboutOpen = {
-  targets: '#container .about',
-  translateX: '50vw',
-  duration: 650,
-  easing: 'easeInOutQuad'
+const elements = {
+  about: {
+    element: '#container #about',
+    activate: {
+      translateX: '50vw',
+      duration: 700,
+      offset: 0,
+      easing: 'easeInOutQuart'
+    },
+    deactivate: {
+      translateX: 0,
+      duration: 700,
+      offset: 0,
+      easing: 'easeInOutQuart'
+    }
+  },
+  page: {
+    element: '#container #page',
+    activate: {
+      translateX: '50vw',
+      duration: 800,
+      offset: 20,
+      easing: 'easeInOutQuart'
+    },
+    deactivate: {
+      translateX: 0,
+      duration: 800,
+      offset: 20,
+      easing: 'easeInOutQuart'
+    }
+  },
+  menu: {
+    element: '#container #menu',
+    activate: {
+      translateX: '50vw',
+      duration: 730,
+      offset: 100,
+      easing: 'easeInOutQuart'
+    },
+    deactivate: {
+      translateX: 0,
+      duration: 730,
+      offset: 0,
+      easing: 'easeInOutQuart'
+    }
+  }
 }
 
-let pageClosed = {
-  targets: '#container .page',
-  translateX: 0,
-  duration: 700,
-  easing: 'easeInOutQuad'
-}
-let pageOpen = {
-  targets: '#container .page',
-  translateX: '50vw',
-  duration: 700,
-  easing: 'easeInOutQuad'
-}
+function ActionItem (name, targets) {
+  this.name = name
+  this.targets = []
 
-let menuClosed = {
-  targets: '#container .side-menu',
-  translateX: 0,
-  duration: 630,
-  easing: 'easeInOutQuad'
-}
-let menuOpen = {
-  targets: '#container .side-menu',
-  translateX: '50vw',
-  duration: 630,
-  easing: 'easeInOutQuad'
+  // Create new anime timeline instances for activate and deactivate
+  this.activateTimeline = anime.timeline()
+  this.deactivateTimeline = anime.timeline()
+
+  targets.forEach((target, key) => {
+    if (elements[target] === undefined) {
+      console.error(`Invalid ActionItem target: '${target}'`)
+      return
+    }
+    this.targets.push(elements[target])
+    // Set the target element on activate and deactivate so we don't have to repeat that on every element
+    this.targets[key].activate.targets = this.targets[key].element
+    this.targets[key].deactivate.targets = this.targets[key].element
+  })
+
+  this.activate = () => {
+    this.targets.forEach((target) => {
+      // Add each of the targets to the animation timeline
+      this.activateTimeline.add(target.activate)
+    })
+  }
+
+  this.deactivate = () => {
+    this.targets.forEach((target) => {
+      // Add each of the targets to the animation timeline
+      this.deactivateTimeline.add(target.deactivate)
+    })
+  }
 }
 
 export default {
@@ -48,21 +91,27 @@ export default {
     }
   },
   methods: {
+
+    close (targets, duration = 630, easing = 'easeInOutQuad') {
+      anime({
+        targets: targets,
+        duration: duration,
+        easing: easing
+      })
+    },
+
     openAbout () {
       if (this.aboutIsOpen) {
-        anime(aboutClosed)
-        anime(pageClosed)
-        anime(menuClosed)
+        this.aboutAnim.deactivate()
         this.aboutIsOpen = false
       } else {
-        anime(aboutOpen)
-        anime(pageOpen)
-        anime(menuOpen)
+        this.aboutAnim.activate()
         this.aboutIsOpen = true
       }
     }
   },
   mounted () {
+    this.aboutAnim = new ActionItem('about', ['about', 'page', 'menu'])
     // console.log(about.a())
   }
 }

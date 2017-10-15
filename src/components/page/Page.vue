@@ -1,7 +1,7 @@
 <template>
   <div id="container">
 
-    <div class="about">
+    <div id="about">
       <article class="about-inner">
         <h3 class="title">Hello,</h3>
         <h3 class="title">Is it me you're looking for?</h3>
@@ -16,7 +16,7 @@
       </article>
     </div>
 
-    <div class="page">
+    <div id="page">
       <div class="title-box">
         <h1 class="title">{{title}}</h1>
         <h2 class="title">{{subtitle}}</h2>
