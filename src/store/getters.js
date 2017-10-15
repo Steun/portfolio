@@ -8,5 +8,5 @@ export const getCurrentProject = state => {
 }
 
 export const getProject = (state, getters) => (name) => {
-  return state.projects.find(proj => proj.name === name)
+  return state.projects.find(p => p.name === name)
 }
