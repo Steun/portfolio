@@ -23,6 +23,8 @@ module.exports = {
     'space-before-function-paren': 0,
     // Add a space after keywords
     'keyword-spacing': 1,
+    // ignore trailing spaces
+    'no-trailing-spaces': 0,
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await
