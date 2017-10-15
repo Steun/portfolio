@@ -30,12 +30,18 @@ a,
 .link {
   text-decoration: underline;
   letter-spacing: .43pt;
+  font-family: $regular-font;
+  color: $white;
 
   &:active,
   &:focus,
   &:visited {
     color: inherit;
   }
+}
+
+p {
+  font-family: $regular-font;
 }
 
 // Buttons

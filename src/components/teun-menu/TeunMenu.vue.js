@@ -6,7 +6,7 @@ const elements = {
     activate: {
       translateX: '50vw',
       duration: 700,
-      offset: 0,
+      offset: 300,
       easing: 'easeInOutQuart'
     },
     deactivate: {
@@ -21,12 +21,14 @@ const elements = {
     activate: {
       translateX: '50vw',
       duration: 800,
-      offset: 20,
+      scale: 1.1,
+      offset: 320,
       easing: 'easeInOutQuart'
     },
     deactivate: {
       translateX: 0,
       duration: 800,
+      scale: 1,
       offset: 20,
       easing: 'easeInOutQuart'
     }
@@ -36,13 +38,32 @@ const elements = {
     activate: {
       translateX: '50vw',
       duration: 730,
-      offset: 100,
+      offset: 480,
       easing: 'easeInOutQuart'
     },
     deactivate: {
       translateX: 0,
       duration: 730,
       offset: 0,
+      easing: 'easeInOutQuart'
+    }
+  },
+  pageTitle: {
+    element: '#page .title-box .title',
+    activate: {
+      duration: 630,
+      offset: 0,
+      translateY: '-3vh',
+      color: '#fff',
+      opacity: 0,
+      easing: 'easeInOutQuart'
+    },
+    deactivate: {
+      translateY: 0,
+      color: '#000',
+      opacity: 1,
+      duration: 730,
+      offset: 420,
       easing: 'easeInOutQuart'
     }
   }
@@ -92,14 +113,6 @@ export default {
   },
   methods: {
 
-    close (targets, duration = 630, easing = 'easeInOutQuad') {
-      anime({
-        targets: targets,
-        duration: duration,
-        easing: easing
-      })
-    },
-
     openAbout () {
       if (this.aboutIsOpen) {
         this.aboutAnim.deactivate()
@@ -111,7 +124,7 @@ export default {
     }
   },
   mounted () {
-    this.aboutAnim = new ActionItem('about', ['about', 'page', 'menu'])
+    this.aboutAnim = new ActionItem('about', ['about', 'page', 'menu', 'pageTitle'])
     // console.log(about.a())
   }
 }

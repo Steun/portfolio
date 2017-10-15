@@ -17,3 +17,9 @@ body {
   font-family: $semibold-font;
 }
 
+#container {
+  @extend %absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}

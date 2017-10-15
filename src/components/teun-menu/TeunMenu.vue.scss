@@ -13,7 +13,7 @@
   .name {
     font-size: $font-size;
     color: $primary-accent;
-    padding: 1vh 0;
+    padding: 1vh 0 3vh;
   }
 
   .menu-container {
@@ -28,6 +28,7 @@
         font-size: $font-size;
         color: $clay;
         text-decoration: none;
+        font-family: $medium-font;
       }
     }
   }
