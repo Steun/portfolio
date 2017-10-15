@@ -1,5 +1,7 @@
 import anime from 'animejs'
-// import * as about from './partials/about'
+import * as projects from '../../services/projects.service'
+
+console.log(projects.get('aa'))
 
 let about,
     page,

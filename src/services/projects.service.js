@@ -1,19 +1,17 @@
-class Projects {
-  constructor() {
-    this.data = [
-      {
-        name: 'projectp',
-        id: 1
-      },
-      {
-        name: 'Lift',
-        id: 2
-      }
-    ]
+let projects = [
+  {
+    name: 'projectp',
+    id: 1
+  },
+  {
+    name: 'Lift',
+    id: 2
   }
-  get(name) {
-    return this.data.find(x => x.name === name)
-  }
+]
+
+function get(name) {
+  return projects.find(x => x.name === name)
 }
 
-export {Projects}
+export {projects, get}
+
