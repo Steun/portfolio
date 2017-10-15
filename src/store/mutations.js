@@ -1,3 +1,3 @@
-export const SET_CURRENT_PROJECT = (state, post) => {
-  state.current = post
+export const SET_CURRENT_PROJECT = (state, project) => {
+  state.current = project
 }

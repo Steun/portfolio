@@ -8,7 +8,16 @@ import * as mutations from './mutations'
 Vue.use(Vuex)
 
 const state = {
-  projects: {},
+  projects: [
+    {
+      name: 'projectp',
+      title: 'Project P'
+    },
+    {
+      name: 'Lift',
+      title: 'Lift'
+    }
+  ],
   current: {}
 }
 

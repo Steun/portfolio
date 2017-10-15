@@ -1,7 +1,4 @@
 import anime from 'animejs'
-import * as projects from '../../services/projects.service'
-
-console.log(projects.get('aa'))
 
 let about,
     page,
