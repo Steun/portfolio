@@ -4,3 +4,8 @@
   top: 0;
   left: 0;
 }
+
+// extend on elements that flicker when having applied animations (with Animejs)
+%no-flick {
+  -webkit-backface-visibility: hidden;
+}

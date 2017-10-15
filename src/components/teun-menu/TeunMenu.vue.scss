@@ -1,0 +1,40 @@
+.side-menu {
+
+  $bg: $porcelain;
+  $inner-offset: 3vw;
+  $font-size: 2vh;
+
+  @extend %absolute;
+  width: $side-menu-width;
+  height: 100vh;
+  background: $bg;
+  will-change: transform;
+
+  .name {
+    font-size: $font-size;
+    color: $primary-accent;
+    padding: 1vh 0;
+  }
+
+  .menu-container {
+    @extend %absolute;
+    left: $inner-offset;
+
+    .item {
+      padding: .7vh 0;
+
+      a {
+        display: block;
+        font-size: $font-size;
+        color: $clay;
+        text-decoration: none;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
