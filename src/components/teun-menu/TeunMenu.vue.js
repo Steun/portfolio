@@ -1,4 +1,4 @@
-import { ActionItem } from '../../assets/api/actions'
+import { ActionItem } from '@/assets/scripts/actions'
 
 export default {
   name: 'teunMenu',
@@ -21,8 +21,6 @@ export default {
     }
   },
   mounted () {
-    console.log(ActionItem)
     this.aboutAnim = new ActionItem('aboutSlideOut')
-    // console.log(about.a())
   }
 }

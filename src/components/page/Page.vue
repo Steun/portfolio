@@ -19,7 +19,8 @@
       </section>
     </div>
 
-    <div id="page">
+    <div id="page" :class="currentProject.name">
+      <canvas id="bg"></canvas>
       <div class="title-box">
         <h1 class="title">{{title}}</h1>
         <h2 class="title">{{subtitle}}</h2>

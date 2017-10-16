@@ -4,8 +4,8 @@ import Vuex from 'vuex'
 import * as getters from './getters'
 import actions from './actions'
 import * as mutations from './mutations'
-import actionGroups from '../assets/api/actions'
-import projects from '../assets/api/projects'
+import actionGroups from '@/assets/scripts/actions'
+import projects from '@/assets/scripts/projects'
 
 Vue.use(Vuex)
 
