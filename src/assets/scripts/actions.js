@@ -76,6 +76,20 @@ export const actionGroups = {
         offset: 420,
         easing: 'easeInOutQuart'
       }
+    },
+    curlywurly: {
+      element: '.curlywurly polyline',
+      activate: {
+        duration: 600,
+        offset: 0,
+        strokeDashoffset: 300,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        strokeDashoffset: 0,
+        duration: 800,
+        easing: 'easeInOutQuart'
+      }
     }
   },
   changeProjectBackground: {
