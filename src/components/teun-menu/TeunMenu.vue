@@ -4,13 +4,13 @@
     <div class="menu-container">
 
       <div class="logo-container">
-        <h3 class="name">Teun Kelting</h3>
+        <router-link :to="{ name: 'project', params: { project: projects[0].name}}" class="name"><h3>Teun Kelting</h3></router-link>
       </div>
 
       <ul class="menu">
-        <li class="item"><a href="#">Lift</a></li>
-        <li class="item"><a href="#">Project P</a></li>
-        <li class="item"><a href="#">Compilex</a></li>
+        <li class="item" v-for="p in projects" v-if="p.name !== projects[0].name">
+          <router-link :to="{ name: 'project', params: { project: p.name}}" class="item">{{ p.title }}</router-link>
+        </li>
         <li class="item"><a @click="openAbout()" href="#">About</a></li>
       </ul>
     </div>

@@ -1,0 +1,28 @@
+.project {
+  @extend %absolute;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+
+  .title-box {
+    @extend %absolute;
+    top: 22vh;
+    left: calc(#{$side-menu-width} + 8vw);
+  }
+
+  .button-box {
+    @extend %absolute;
+    bottom: 6vh;
+    right: 6vw;
+    left: auto;
+    top: auto;
+    display: inline-block;
+  }
+
+  &.splash {
+    background-image: url('./projects/compilex-laptop.jpg');
+  }
+  &.lift {
+    background-image: url('./projects/lift.jpg');
+  }
+}

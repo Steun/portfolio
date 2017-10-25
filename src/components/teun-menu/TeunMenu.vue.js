@@ -1,15 +1,16 @@
 import { ActionItem } from '@/assets/scripts/actions'
+import store from '@/store'
 
 export default {
   name: 'teunMenu',
   data () {
     return {
       title: 'Menu',
-      aboutIsOpen: false
+      aboutIsOpen: false,
+      projects: store.state.projects
     }
   },
   methods: {
-
     openAbout () {
       if (this.aboutIsOpen) {
         this.aboutAnim.deactivate()

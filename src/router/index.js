@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Page from '@/components/page/Page'
+import Project from '@/components/project/Project'
 
 Vue.use(Router)
 
@@ -9,8 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'page',
-      component: Page
+      component: Page,
+      children: [
+        {
+          path: '',
+          component: Project
+        },
+        {
+          path: ':project',
+          component: Project,
+          name: 'project'
+        }
+      ]
     }
   ]
 })

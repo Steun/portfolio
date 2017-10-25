@@ -19,16 +19,10 @@
       </section>
     </div>
 
-    <div id="page" :class="currentProject.name">
-      <canvas id="bg"></canvas>
-      <div class="title-box">
-        <h1 class="title">{{title}}</h1>
-        <h2 class="title">{{subtitle}}</h2>
-      </div>
+    <div id="page">
+      <!--<project></project>-->
+      <router-view></router-view>
 
-      <div class="button-box">
-        <a class="btn border">View site</a>
-      </div>
     </div>
 
     <teun-menu></teun-menu>

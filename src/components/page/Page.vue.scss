@@ -49,36 +49,11 @@
 }
 
 #page {
-
-  background-size: cover;
   will-change: transform;
   @extend %no-flick;
   @extend %absolute;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-
-  #bg {
-    display: block;
-  }
-
-  .title-box {
-    @extend %absolute;
-    top: 22vh;
-    left: calc(#{$side-menu-width} + 8vw);
-  }
-
-  .button-box {
-    @extend %absolute;
-    bottom: 6vh;
-    right: 6vw;
-    left: auto;
-    top: auto;
-    display: inline-block;
-  }
-
-  &.projectp {
-    background-image: url('./projects/compilex-laptop.jpg');
-  }
 }
 
