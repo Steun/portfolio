@@ -9,8 +9,12 @@ export default {
     }
   },
   methods: {
-    setCurrentProject (name) {
-      this.currentProject = store.getters.getProject(name)
+    setCurrentProject (project) {
+      if (project !== undefined) {
+        this.currentProject = store.getters.getProject(project)
+      } else {
+        router.go({name: 'project', params: {project: store.state.projects[0]}})
+      }
     }
 
   },
@@ -19,9 +23,7 @@ export default {
     next()
   },
   mounted() {
-    if (this.$route.params.project !== this.currentProject.name) {
-      this.setCurrentProject(this.$route.params.project)
-    }
+    this.setCurrentProject(this.$route.params.project)
   }
 
 }

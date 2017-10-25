@@ -57,3 +57,14 @@
   overflow: hidden;
 }
 
+// Transitions
+.fade-enter-active, .fade-leave-active {
+  transition: all .2s $animation-curve;
+}
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-leave-to {
+  opacity: 1;
+}

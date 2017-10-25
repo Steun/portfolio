@@ -10,7 +10,5 @@ export default {
   components: {
     teunMenu,
     project
-  },
-  mounted() {
   }
 }

@@ -2,12 +2,33 @@
   @extend %absolute;
   height: 100vh;
   width: 100vw;
-  background-size: cover;
 
   .title-box {
     @extend %absolute;
     top: 22vh;
     left: calc(#{$side-menu-width} + 8vw);
+
+    .title {
+      animation: fade $animation-curve 2s;
+    }
+  }
+
+  .curlywurly {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100px;
+
+    svg {
+      width: 100%;
+      height: auto;
+      fill: none;
+      stroke: $primary-accent;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 300;
+      animation: curlywurly ease 2.5s;
+    }
   }
 
   .button-box {
@@ -19,10 +40,59 @@
     display: inline-block;
   }
 
-  &.splash {
-    background-image: url('./projects/compilex-laptop.jpg');
+  .bg {
+    @extend %absolute;
+    @extend %no-flick;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    animation: scalefade ease 4s;
   }
-  &.lift {
+
+  &.splash > .bg {
+    background-image: url('./projects/compilex-laptop.jpg');
+
+  }
+  &.lift > .bg {
     background-image: url('./projects/lift.jpg');
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes curlywurly {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  30% {
+    stroke-dashoffset: 300;
+  }
+  50% {
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scalefade {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.003);
+  }
+  100% {
+    transform: scale(1);
   }
 }

@@ -77,6 +77,34 @@ export const actionGroups = {
         easing: 'easeInOutQuart'
       }
     }
+  },
+  changeProjectBackground: {
+    bg: {
+      element: '.project .bg',
+      activate: {
+        scale: 1,
+        duration: 700,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {}
+    }
+  },
+  projectChange: {
+    bg: {
+      element: '.project',
+      activate: {
+        scale: 1.05,
+        duration: 700,
+        offset: 1000,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        scale: 1,
+        duration: 700,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      }
+    }
   }
 }
 
@@ -99,6 +127,7 @@ export function ActionItem (name) {
   }
 
   this.activate = () => {
+    console.log(document.querySelectorAll('#container .project')[0])
     for (const target of Object.values(this.targets)) {
       // Add each of the targets to the animation timeline
       this.activateTimeline.add(target.activate)

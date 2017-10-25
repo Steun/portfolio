@@ -27,3 +27,6 @@ $primary-accent: $purple;
 $regular-font: 'Regular', 'Source Sans Pro', Arial, sans-serif;
 $semibold-font: 'Semibold', 'Source Sans Pro', Arial, sans-serif;
 $medium-font: 'Medium', 'Source Sans Pro', Arial, sans-serif;
+
+$animation-snap: cubic-bezier(1, .005, .240, 1);
+$animation-curve: cubic-bezier(0.25, 0.25, 0.39, 1);

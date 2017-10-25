@@ -20,10 +20,11 @@
     </div>
 
     <div id="page">
-      <!--<project></project>-->
-      <router-view></router-view>
-
+      <transition name="fade" mode="in-out">
+        <router-view :key="$route.fullPath"></router-view>
+      </transition>
     </div>
+
 
     <teun-menu></teun-menu>
 
