@@ -51,10 +51,15 @@
 
   &.splash > .bg {
     background-image: url('./projects/compilex-laptop.jpg');
-
   }
   &.lift > .bg {
     background-image: url('./projects/lift.jpg');
+  }
+  &.projectp > .bg {
+    background-image: url('http://teunkelting.nl/images/project-p-imac.jpg');
+  }
+  &.compilex > .bg {
+    background-image: url('./projects/compilex-laptop.jpg');
   }
 }
 

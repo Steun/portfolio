@@ -1,0 +1,42 @@
+#info {
+  $bg: $porcelain;
+  $inner-offset: 3vw;
+  $font-size: 2vh;
+  $width: 60vw;
+
+  @extend %absolute;
+  right: 0;
+  left: auto;
+  height: 100%;
+  width: $width;
+  display: flex;
+  align-items: flex-start;
+
+  .info-inner {
+    background: $bg;
+    padding: $inner-offset;
+    height: 100%;
+
+    .row {
+      $GRID_SIZES: ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve');
+      $spacing: 1vw;
+
+      display: flex;
+      flex-direction: row;
+      margin: -$spacing;
+
+      .col {
+        padding: $spacing;
+
+        @each $size in $GRID_SIZES {
+
+          &.#{$size} {
+            width: 100% / 12 * index($GRID_SIZES, $size);
+          }
+
+        }
+      }
+    }
+  }
+}
+

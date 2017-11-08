@@ -21,7 +21,9 @@
 
     <div id="page">
       <transition name="fade" mode="in-out">
-        <router-view :key="$route.fullPath"></router-view>
+        <keep-alive>
+          <router-view :key="$route.fullPath"></router-view>
+        </keep-alive>
       </transition>
     </div>
 

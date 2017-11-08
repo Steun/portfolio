@@ -1,5 +1,6 @@
 import store from '@/store'
-import router from '@/router'
+import Info from '@/components/info/Info'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'project',
@@ -9,11 +10,14 @@ export default {
     }
   },
   methods: {
+    ...mapActions({
+      actionSetCurrentProject: 'commitCurrentProject'
+    }),
+
     setCurrentProject (project) {
       if (project !== undefined) {
-        this.currentProject = store.getters.getProject(project)
-      } else {
-        // router.go({name: 'project', params: {project: store.state.projects[0]}})
+        this.actionSetCurrentProject(store.getters.getProject(project))
+        this.currentProject = store.state.currentProject
       }
     }
 
@@ -24,5 +28,8 @@ export default {
     } else {
       this.setCurrentProject(store.state.projects[0].name)
     }
+  },
+  components: {
+    Info
   }
 }

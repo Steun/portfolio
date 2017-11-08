@@ -13,4 +13,3 @@ yarn-error.log*
 *.sln
 
 !.idea/codeStyleSettings.xml
-!.idea/*.iml

@@ -13,8 +13,9 @@
     </div>
 
     <div class="button-box">
-      <a class="btn border">View site</a>
+      <router-link :to="{ name: 'info'}" class="btn border">View site</router-link>
     </div>
+    <router-view :current-project="currentProject"></router-view>
   </div>
 
 </template>

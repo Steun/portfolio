@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Page from '@/components/page/Page'
 import Project from '@/components/project/Project'
+import Info from '@/components/info/Info'
 
 Vue.use(Router)
 
@@ -18,8 +19,15 @@ export default new Router({
         },
         {
           path: ':project',
+          name: 'project',
           component: Project,
-          name: 'project'
+          children: [
+            {
+              path: 'info',
+              name: 'info',
+              component: Info
+            }
+          ]
         }
       ]
     }
