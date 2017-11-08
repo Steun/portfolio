@@ -13,6 +13,10 @@ export default new Router({
       component: Page,
       children: [
         {
+          path: '',
+          component: Project
+        },
+        {
           path: ':project',
           component: Project,
           name: 'project'

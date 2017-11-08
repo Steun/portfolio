@@ -141,7 +141,6 @@ export function ActionItem (name) {
   }
 
   this.activate = () => {
-    console.log(document.querySelectorAll('#container .project')[0])
     for (const target of Object.values(this.targets)) {
       // Add each of the targets to the animation timeline
       this.activateTimeline.add(target.activate)

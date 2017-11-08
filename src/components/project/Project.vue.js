@@ -13,17 +13,16 @@ export default {
       if (project !== undefined) {
         this.currentProject = store.getters.getProject(project)
       } else {
-        router.go({name: 'project', params: {project: store.state.projects[0]}})
+        // router.go({name: 'project', params: {project: store.state.projects[0]}})
       }
     }
 
   },
-  beforeRouteUpdate(to, from, next) {
-    this.setCurrentProject(to.params.project)
-    next()
-  },
   mounted() {
-    this.setCurrentProject(this.$route.params.project)
+    if (this.$route.params.project) {
+      this.setCurrentProject(this.$route.params.project)
+    } else {
+      this.setCurrentProject(store.state.projects[0].name)
+    }
   }
-
 }
