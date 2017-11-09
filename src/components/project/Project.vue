@@ -1,7 +1,7 @@
 <template>
   <div class="project" :class="currentProject.class">
     <div class="bg"></div>
-    <div class="title-box">
+    <div class="title-box" :class="currentProject.black ? 'black' : 'white'">
       <h1 class="title">{{currentProject.title}}</h1>
       <h2 class="title">{{currentProject.subtitle}}</h2>
       <div class="curlywurly">

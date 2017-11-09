@@ -3,6 +3,7 @@
   $bg: $porcelain;
   $inner-offset: 3vw;
   $font-size: 2vh;
+  $highlight: $black;
 
   @extend %absolute;
   width: $side-menu-width;
@@ -13,24 +14,53 @@
   .name {
     font-size: $font-size;
     color: $primary-accent;
-    padding: 1vh 0 3vh;
+    padding: 1vh 0 .8vh;
+    margin-bottom: 5vh;
     text-decoration: none;
     display: block;
+    border-bottom: 1px solid $mystic;
   }
 
   .menu-container {
     @extend %absolute;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
     left: $inner-offset;
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      height: 100%;
+      width: 100%;
+    }
 
     .item {
       padding: .7vh 0;
+      display: block;
 
       a {
-        display: block;
         font-size: $font-size;
         color: $clay;
         text-decoration: none;
         font-family: $medium-font;
+        transition: color $animation-snap .4s;
+        box-sizing: border-box;
+        width: 100%;
+
+        &.router-link-active {
+          color: $highlight;
+          transition: color $animation-snap .4s;
+        }
+      }
+
+      &.about {
+        position: absolute;
+        bottom: $inner-offset;
+        cursor: pointer;
+        width: calc(#{$side-menu-width} - #{$inner-offset});
       }
     }
   }
@@ -39,5 +69,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    height: 100%;
   }
 }

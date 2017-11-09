@@ -11,7 +11,9 @@
         <li class="item" v-for="p in projects" v-if="p.name !== projects[0].name">
           <router-link :to="{ name: 'project', params: { project: p.name}}" class="item">{{ p.title }}</router-link>
         </li>
-        <li class="item"><a @click="openAbout()">About</a></li>
+        <li class="item">
+          <a class="item about" @click="openAbout()">About</a>
+        </li>
       </ul>
     </div>
   </nav>
