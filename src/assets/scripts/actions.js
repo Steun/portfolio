@@ -82,7 +82,7 @@ export const actionGroups = {
       activate: {
         duration: 600,
         offset: 0,
-        strokeDashoffset: 300,
+        strokeDashoffset: 400,
         easing: 'easeInOutQuart'
       },
       deactivate: {

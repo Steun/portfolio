@@ -16,6 +16,15 @@
     background: $bg;
     padding: $inner-offset;
     height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    p {
+      font-size: 1em;
+      line-height: 1.5;
+      font-family: $medium-font;
+    }
 
     .row {
       $GRID_SIZES: ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve');
@@ -36,6 +45,21 @@
 
         }
       }
+    }
+  }
+
+  .btn.close {
+    background: $primary-accent;
+    border: none;
+    padding: 22px 24px;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 30px;
+    transition: margin $animation-snap .2s;
+
+    &:hover {
+      margin-left: -45px;
+      transition: margin $animation-snap .2s;
     }
   }
 }

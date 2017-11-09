@@ -12,7 +12,7 @@
           <router-link :to="{ name: 'project', params: { project: p.name}}" class="item">{{ p.title }}</router-link>
         </li>
         <li class="item">
-          <a class="item about" @click="openAbout()">About</a>
+          <a class="item about" @click="toggleAbout()">About</a>
         </li>
       </ul>
     </div>

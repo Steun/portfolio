@@ -11,7 +11,7 @@ export default {
     }
   },
   methods: {
-    openAbout () {
+    toggleAbout () {
       if (this.aboutIsOpen) {
         this.aboutAnim.deactivate()
         this.aboutIsOpen = false

@@ -1,7 +1,9 @@
+$about-width: 50vw;
+
 #about {
 
   $side-padding: 4vw;
-  $width: 50vw;
+  $width: $about-width;
 
   @extend %absolute;
   @extend %no-flick;
@@ -56,6 +58,17 @@
   width: 100vw;
   overflow: hidden;
 }
+
+//#container > .overlay {
+//  @extend %absolute;
+//  width: calc(100% - #{$about-width});
+//  height: 100%;
+//  right: 0;
+//  left: auto;
+//  background: transparentize($black, .7);
+//  z-index: 2;
+//  cursor: pointer;
+//}
 
 // Transitions
 .fade-enter-active, .fade-leave-active {

@@ -23,17 +23,17 @@
   .curlywurly {
     margin-top: 30px;
     display: inline-block;
-    width: 100px;
+    width: 120px;
 
     svg {
       width: 100%;
       height: auto;
       fill: none;
       stroke: $primary-accent;
-      stroke-width: 10;
+      stroke-width: 14;
       stroke-linecap: round;
       stroke-linejoin: round;
-      stroke-dasharray: 300;
+      stroke-dasharray: 400;
       animation: curlywurly ease 2.5s;
     }
   }

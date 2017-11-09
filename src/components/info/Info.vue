@@ -1,6 +1,6 @@
 <template>
   <div id="info" v-if="currentProject.moreInfo">
-    <router-link :to="{ name: 'project'}"><span class="btn border close">&times;</span></router-link>
+    <router-link :to="{ name: 'project'}"><span class="btn border close"><</span></router-link>
 
     <div class="info-inner" v-if="currentProject.moreLayoutType == 1">
       <div class="row">
@@ -8,12 +8,12 @@
           <img src="" alt="">
         </div>
         <div class="col six">
-          {{currentProject.infoText1}}
+          <p>{{currentProject.infoText1}}</p>
         </div>
       </div>
       <div class="row">
         <div class="col six">
-          {{currentProject.infoText2}}
+          <p>{{currentProject.infoText2}}</p>
         </div>
         <div class="col six">
           <img src="" alt="">
@@ -29,7 +29,7 @@
       </div>
       <div class="row">
         <div class="col twelve">
-          {{currentProject.infoText1}}
+          <p>{{currentProject.infoText1}}</p>
         </div>
       </div>
     </div>
