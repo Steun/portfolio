@@ -1,0 +1,52 @@
+<template>
+  <div class="project-info">
+
+    <div class="gradient-overlay"></div>
+
+    <div class="button-box" v-if="currentProject.moreInfo">
+      <button type="button" @click="toggleProjectInfo()" class="btn border">Read more</button>
+    </div>
+
+    <div id="info" v-if="currentProject.moreInfo">
+      <button type="button" @click="toggleProjectInfo()" class="btn border close"><</button>
+
+      <div class="info-inner" v-if="currentProject.moreLayoutType == 1">
+        <div class="row">
+          <div class="col six">
+            <img src="" alt="">
+          </div>
+          <div class="col six">
+            <h2 class="title">{{currentProject.infoTitle1}}</h2>
+            <p>{{currentProject.infoText1}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col six">
+            <h2 class="title">{{currentProject.infoTitle2}}</h2>
+            <p>{{currentProject.infoText2}}</p>
+          </div>
+          <div class="col six">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="info-inner" v-if="currentProject.moreLayoutType == 2">
+        <div class="row">
+          <div class="col twelve">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col twelve">
+            <h2 class="title">{{currentProject.infoTitle1}}</h2>
+            <p>{{currentProject.infoText1}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="./ProjectInfo.vue.js"></script>
+<style lang="scss" src="./ProjectInfo.vue.scss"></style>

@@ -32,9 +32,9 @@ const projects = [
   {
     name: 'lift',
     title: 'Lift',
-    subtitle: 'Wajong community',
+    subtitle: 'Social community webapp',
     class: 'lift',
-    black: true,
+    black: false,
     description: '',
     moreInfo: true,
     moreLayoutType: 1,

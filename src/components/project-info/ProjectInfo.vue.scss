@@ -1,16 +1,17 @@
 #info {
-  $bg: $porcelain;
+  $bg: $white;
   $inner-offset: 3vw;
-  $font-size: 2vh;
-  $width: 60vw;
+  $width: 50vw;
 
   @extend %absolute;
-  right: 0;
+  @extend %no-flick;
+  right: -$width;
   left: auto;
   height: 100%;
   width: $width;
   display: flex;
   align-items: flex-start;
+  transform: translateX(0);
 
   .info-inner {
     background: $bg;
@@ -19,6 +20,11 @@
     width: 100%;
     overflow-y: scroll;
     box-sizing: border-box;
+
+    .title {
+      color: $primary-accent;
+      font-size: 2em;
+    }
 
     p {
       font-size: 1em;
@@ -56,6 +62,7 @@
     margin-left: -35px;
     margin-top: 30px;
     transition: margin $animation-snap .2s;
+    transform: scale(0);
 
     &:hover {
       margin-left: -45px;
@@ -63,4 +70,3 @@
     }
   }
 }
-

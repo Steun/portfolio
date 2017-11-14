@@ -75,6 +75,12 @@ p {
   margin: 0;
 }
 
+.subtitle {
+  @extend .title;
+  margin: 0;
+  font-size: 2em;
+}
+
 // Lists
 ul.inline {
   padding: 0;

@@ -1,5 +1,5 @@
 import store from '@/store'
-import Info from '@/components/info/Info'
+import ProjectInfo from '@/components/project-info/ProjectInfo'
 import { mapActions } from 'vuex'
 
 export default {
@@ -30,6 +30,6 @@ export default {
     }
   },
   components: {
-    Info
+    ProjectInfo
   }
 }

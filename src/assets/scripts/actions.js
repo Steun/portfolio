@@ -6,7 +6,10 @@ const DOMelements = {
   about: '#container #about',
   page: '#container #page',
   menu: '#container #menu',
-  pageTitle: '#page .title-box .title'
+  gradientOverlay: '#page .gradient-overlay',
+  titlebox: '#page .title-box',
+  curlywurly: '.curlywurly polyline',
+  projectInfo: '#info'
 }
 
 export const actionGroups = {
@@ -58,19 +61,17 @@ export const actionGroups = {
         easing: 'easeInOutQuart'
       }
     },
-    pageTitle: {
-      element: DOMelements.pageTitle,
+    titlebox: {
+      element: DOMelements.titlebox,
       activate: {
         duration: 630,
         offset: 0,
         translateY: '-3vh',
-        color: '#fff',
         opacity: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         translateY: 0,
-        color: '#000',
         opacity: 1,
         duration: 730,
         offset: 420,
@@ -78,7 +79,7 @@ export const actionGroups = {
       }
     },
     curlywurly: {
-      element: '.curlywurly polyline',
+      element: DOMelements.curlywurly,
       activate: {
         duration: 600,
         offset: 0,
@@ -92,30 +93,70 @@ export const actionGroups = {
       }
     }
   },
-  changeProjectBackground: {
-    bg: {
-      element: '.project .bg',
+  projectInfo: {
+    container: {
+      element: DOMelements.projectInfo,
       activate: {
-        scale: 1,
+        translateX: '-100%',
         duration: 700,
-        easing: 'easeInOutQuart'
-      },
-      deactivate: {}
-    }
-  },
-  projectChange: {
-    bg: {
-      element: '.project',
-      activate: {
-        scale: 1.05,
-        duration: 700,
-        offset: 1000,
+        offset: 20,
         easing: 'easeInOutQuart'
       },
       deactivate: {
-        scale: 1,
+        translateX: 0,
+        duration: 700,
+        offset: 300,
+        easing: 'easeInOutQuart'
+      }
+    },
+    backbutton: {
+      element: '#info .btn.close',
+      activate: {
+        scale: [0, 1],
+        duration: 300,
+        offset: 700,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        duration: 300,
+        scale: 0,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      }
+    },
+    gradientOverlay: {
+      element: DOMelements.gradientOverlay,
+      activate: {
+        translateY: '20%',
+        opacity: 0,
         duration: 700,
         offset: 0,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        duration: 1200,
+        translateY: 0,
+        opacity: 1,
+        offset: 700,
+        easing: 'easeInOutQuart'
+      }
+    },
+    titlebox: {
+      element: DOMelements.titlebox,
+      activate: {
+        scale: 0.8,
+        translateX: '-8vw',
+        translateY: '-8vh',
+        duration: 700,
+        offset: 100,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        duration: 700,
+        scale: 1,
+        translateX: 0,
+        translateY: 0,
+        offset: 200,
         easing: 'easeInOutQuart'
       }
     }

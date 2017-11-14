@@ -1,27 +1,34 @@
 .project {
-  @extend %absolute;
-  height: 100vh;
-  width: 100vw;
+  position: absolute;
+  height: 100%;
+  width: calc(100% - #{$side-menu-width});
+  left: $side-menu-width;
 
   .title-box {
     @extend %absolute;
     top: 22vh;
-    left: calc(#{$side-menu-width} + 8vw);
+    left: 8vw;
 
     .title {
-      animation: fade $animation-curve 2s;
+      animation: fade $animation-curve 1.7s;
     }
 
-    &.white .title {
+    .subtitle {
+      animation: fade $animation-curve 3s;
+    }
+
+    &.white .title,
+    &.white .subtitle {
       color: $white;
     }
-    &.black .title {
+    &.black .title,
+    &.black .subtitle {
       color: $black;
     }
   }
 
   .curlywurly {
-    margin-top: 30px;
+    margin-top: 15px;
     display: inline-block;
     width: 120px;
 
@@ -54,19 +61,48 @@
     width: 100vw;
     background-size: cover;
     animation: scalefade ease 4s;
+    pointer-events: none;
   }
 
-  &.splash > .bg {
-    background-image: url('./projects/compilex-laptop.jpg');
+  .gradient-overlay {
+    @extend %absolute;
+    background: linear-gradient(23deg, transparent 0%, rgba(255, 255, 255, 0) 43%);
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
   }
-  &.lift > .bg {
-    background-image: url('./projects/lift.jpg');
+
+  &.splash {
+    > .bg {
+      background-image: url('./projects/compilex-laptop.jpg');
+    }
+    > .gradient-overlay {
+      background: linear-gradient(23deg, transparent 0%, rgba(255,255,255,0) 43%);
+    }
   }
-  &.projectp > .bg {
-    background-image: url('http://teunkelting.nl/images/project-p-imac.jpg');
+  &.lift {
+    > .bg {
+      background-image: url('./projects/lift.jpg');
+    }
+    > .gradient-overlay {
+      background: linear-gradient(23deg, $orange-red 0%, rgba(255,255,255,0) 43%);
+    }
   }
-  &.compilex > .bg {
-    background-image: url('./projects/compilex-laptop.jpg');
+  &.projectp {
+    > .bg {
+      background-image: url('http://teunkelting.nl/images/project-p-imac.jpg');
+    }
+    > .gradient-overlay {
+      background: linear-gradient(23deg, $pink 0%, rgba(255,255,255,0) 43%);
+    }
+  }
+  &.compilex {
+    > .bg {
+      background-image: url('./projects/compilex-laptop.jpg');
+    }
+    > .gradient-overlay {
+      background: linear-gradient(23deg, $blue 0%, rgba(255,255,255,0) 43%);
+    }
   }
 }
 
@@ -81,10 +117,10 @@
 
 @keyframes curlywurly {
   0% {
-    stroke-dashoffset: 600;
+    stroke-dashoffset: 400;
   }
   30% {
-    stroke-dashoffset: 300;
+    stroke-dashoffset: 200;
   }
   50% {
   }
