@@ -1,9 +1,9 @@
 <template>
-  <div class="project" :class="currentProject.class">
+  <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`">
     <div class="bg"></div>
     <div class="gradient-overlay"></div>
 
-    <div class="title-box" :class="currentProject.black ? 'black' : 'white'">
+    <div class="title-box">
       <h1 class="title">{{currentProject.title}}</h1>
       <h2 class="subtitle">{{currentProject.subtitle}}</h2>
       <div class="curlywurly">
@@ -12,9 +12,11 @@
                     points="7,50 50,7 100,50 150,7 200,50 250,7 300,50"/>
         </svg>
       </div>
-
     </div>
 
+    <div class="description-box" v-if="currentProject.description">
+      <p class="description">{{currentProject.description}}</p>
+    </div>
 
     <project-info ref="project" :current-project="currentProject"></project-info>
 

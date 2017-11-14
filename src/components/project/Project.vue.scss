@@ -1,4 +1,7 @@
 .project {
+
+  $left-offset: 8vw;
+
   position: absolute;
   height: 100%;
   width: calc(100% - #{$side-menu-width});
@@ -7,7 +10,8 @@
   .title-box {
     @extend %absolute;
     top: 22vh;
-    left: 8vw;
+    left: $left-offset;
+    max-width: 100%;
 
     .title {
       animation: fade $animation-curve 1.7s;
@@ -16,15 +20,17 @@
     .subtitle {
       animation: fade $animation-curve 3s;
     }
+  }
 
-    &.white .title,
-    &.white .subtitle {
-      color: $white;
-    }
-    &.black .title,
-    &.black .subtitle {
-      color: $black;
-    }
+  &.theme-white .title,
+  &.theme-white .subtitle,
+  &.theme-white .description {
+    color: $white;
+  }
+  &.theme-black .title,
+  &.theme-black .subtitle,
+  &.theme-black .description {
+    color: $black;
   }
 
   .curlywurly {
@@ -42,6 +48,21 @@
       stroke-linejoin: round;
       stroke-dasharray: 400;
       animation: curlywurly ease 2.5s;
+    }
+  }
+
+  .description-box {
+    @extend %absolute;
+    top: auto;
+    bottom: 10vh;
+    left: $left-offset;
+    max-width: 600px;
+    margin-right: 300px;
+    animation: fade $animation-curve 1s;
+
+    .description {
+      font-size: 1.4em;
+      line-height: 1.4;
     }
   }
 

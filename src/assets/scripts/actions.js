@@ -8,6 +8,7 @@ const DOMelements = {
   menu: '#container #menu',
   gradientOverlay: '#page .gradient-overlay',
   titlebox: '#page .title-box',
+  descriptionbox: '#page .description-box',
   curlywurly: '.curlywurly polyline',
   projectInfo: '#info'
 }
@@ -157,6 +158,23 @@ export const actionGroups = {
         translateX: 0,
         translateY: 0,
         offset: 200,
+        easing: 'easeInOutQuart'
+      }
+    },
+    descriptionbox: {
+      element: DOMelements.descriptionbox,
+      activate: {
+        scale: 0.8,
+        opacity: 0,
+        duration: 700,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        duration: 700,
+        opacity: 1,
+        translateY: ['8vh', 0],
+        offset: 600,
         easing: 'easeInOutQuart'
       }
     }
