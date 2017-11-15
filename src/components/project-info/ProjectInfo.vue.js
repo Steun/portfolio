@@ -22,5 +22,8 @@ export default {
   },
   mounted () {
     this.projectInfo = new ActionItem('projectInfo')
+    this.$watch('expanded', (newValue, oldValue) => {
+      console.log(newValue)
+    })
   }
 }
