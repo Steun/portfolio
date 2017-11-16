@@ -1,8 +1,8 @@
 const projects = [
   {
     name: 'me',
-    title: 'Frontend Developer',
-    subtitle: 'Teun Kelting',
+    title: 'Teun Kelting',
+    subtitle: 'Frontend Developer',
     class: 'splash',
     black: true,
     description: false,
