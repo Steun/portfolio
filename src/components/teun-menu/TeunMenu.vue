@@ -4,7 +4,7 @@
     <div class="menu-container">
 
       <div class="logo-container">
-        <router-link :to="{ name: 'project', params: { project: projects[0].name}}" class="name"><h3>Teun Kelting</h3></router-link>
+        <router-link :to="{ path: '/', params: { project: projects[0].name}}" class="name"><h3>Teun Kelting</h3></router-link>
       </div>
 
       <ul class="menu">
