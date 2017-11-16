@@ -577,3 +577,25 @@ td,
 th {
   padding: 0;
 }
+
+progress {
+
+  $bar-color: $primary-accent;
+  $background-color: $white;
+
+  height: 20px;
+  border: none;
+  background: $background-color;
+  color: $bar-color;
+  -webkit-appearance: none;
+
+  &::-moz-progress-bar {
+    background: $white;
+  }
+  &::-webkit-progress-bar {
+    background: $white;
+  }
+  &::-webkit-progress-value {
+    background-color: $bar-color;
+  }
+}
