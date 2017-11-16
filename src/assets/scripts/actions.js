@@ -26,25 +26,23 @@ export const actionGroups = {
       deactivate: {
         translateX: 0,
         duration: 700,
-        offset: 0,
+        offset: 100,
         easing: 'easeInOutQuart'
       }
     },
     page: {
       element: DOMelements.page,
       activate: {
-        translateX: '50vw',
-        duration: 800,
-        scale: 1.1,
+        translateX: '20vw',
+        duration: 900,
         offset: 320,
-        easing: 'easeInOutQuart'
+        easing: 'easeInOutSine'
       },
       deactivate: {
         translateX: 0,
-        duration: 800,
-        scale: 1,
-        offset: 20,
-        easing: 'easeInOutQuart'
+        duration: 650,
+        offset: 0,
+        easing: 'easeInOutSine'
       }
     },
     menu: {
@@ -52,13 +50,13 @@ export const actionGroups = {
       activate: {
         translateX: '50vw',
         duration: 730,
-        offset: 480,
+        offset: 350,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         translateX: 0,
         duration: 730,
-        offset: 0,
+        offset: 100,
         easing: 'easeInOutQuart'
       }
     },
@@ -67,15 +65,28 @@ export const actionGroups = {
       activate: {
         duration: 630,
         offset: 0,
-        translateY: '-3vh',
         opacity: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
-        translateY: 0,
         opacity: 1,
         duration: 730,
         offset: 420,
+        easing: 'easeInOutQuart'
+      }
+    },
+    descriptionbox: {
+      element: DOMelements.descriptionbox,
+      activate: {
+        opacity: 0,
+        duration: 630,
+        offset: 120,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        opacity: 1,
+        duration: 630,
+        offset: 540,
         easing: 'easeInOutQuart'
       }
     },
@@ -90,6 +101,7 @@ export const actionGroups = {
       deactivate: {
         strokeDashoffset: 0,
         duration: 800,
+        offset: 300,
         easing: 'easeInOutQuart'
       }
     }
@@ -128,7 +140,7 @@ export const actionGroups = {
     gradientOverlay: {
       element: DOMelements.gradientOverlay,
       activate: {
-        translateY: '20%',
+        translateY: '20vh',
         opacity: 0,
         duration: 700,
         offset: 0,
@@ -164,17 +176,17 @@ export const actionGroups = {
     descriptionbox: {
       element: DOMelements.descriptionbox,
       activate: {
-        scale: 0.8,
-        opacity: 0,
         duration: 700,
+        scale: 0.8,
+        translateX: '-8vw',
         offset: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         duration: 700,
-        opacity: 1,
-        translateY: ['8vh', 0],
-        offset: 600,
+        scale: 1,
+        translateX: 0,
+        offset: 100,
         easing: 'easeInOutQuart'
       }
     }
