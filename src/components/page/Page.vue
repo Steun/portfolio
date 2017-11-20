@@ -26,6 +26,7 @@
     </div>
 
     <progress :value="progress" max="100" style="position:absolute; z-index: 999"></progress>
+    <button @click="pauseToggle()" style="position:absolute; right: 0; z-index: 999">toggle slideshow</button>
 
     <teun-menu></teun-menu>
 

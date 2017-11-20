@@ -27,6 +27,16 @@ export default {
 
     clearTickerInterval() {
       clearInterval(this.interval)
+    },
+
+    pauseToggle() {
+      if (this.interval) {
+        this.clearTickerInterval()
+        console.log('paused')
+      } else {
+        console.log('continueing')
+        this.ticker()
+      }
     }
   },
   computed: {
