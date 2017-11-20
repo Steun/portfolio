@@ -21,12 +21,11 @@
 
     <div id="page">
       <transition name="fade" mode="in-out">
-        <keep-alive>
           <router-view :key="$route.fullPath"></router-view>
-        </keep-alive>
       </transition>
     </div>
 
+    <progress :value="progress" max="100" style="position:absolute; z-index: 999"></progress>
 
     <teun-menu></teun-menu>
 

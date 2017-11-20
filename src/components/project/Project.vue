@@ -12,14 +12,13 @@
                     points="7,50 50,7 100,50 150,7 200,50 250,7 300,50"/>
         </svg>
       </div>
-      <progress :value="progress" max="100" style="position:absolute;"></progress>
     </div>
 
     <div class="description-box" v-if="currentProject.description">
       <p class="description">{{currentProject.description}}</p>
     </div>
 
-    <project-info :current-project="currentProject"></project-info>
+    <project-info ref="project" :current-project="currentProject"></project-info>
 
   </div>
 

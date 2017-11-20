@@ -12,6 +12,9 @@ Vue.use(Vuex)
 const state = {
   projects: projects,
   currentProject: projects[0],
+  currentProjectIndex: 0,
+  nextProjectIndex: 1,
+  projectInfoExpanded: false,
   actionGroups: actionGroups
 }
 

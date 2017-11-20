@@ -118,7 +118,7 @@ export const actionGroups = {
       deactivate: {
         translateX: 0,
         duration: 700,
-        offset: 300,
+        offset: 0,
         easing: 'easeInOutQuart'
       }
     },

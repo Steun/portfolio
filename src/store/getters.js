@@ -2,3 +2,7 @@
 export const getProject = (state, getters) => (name) => {
   return state.projects.find(p => p.name === name)
 }
+
+export const getProjectByIndex = (state, getters) => (index) => {
+  return state.projects[index]
+}

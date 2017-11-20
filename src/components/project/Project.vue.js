@@ -1,60 +1,51 @@
-import router from '@/router'
-import store from '@/store'
 import ProjectInfo from '@/components/project-info/ProjectInfo'
-import { mapActions } from 'vuex'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'project',
   data() {
     return {
-      currentProject: store.state.currentProject,
-      progress: 0,
-      currentIndex: 0,
-      nextIndex: 1
+      progress: 0
     }
   },
   methods: {
     ...mapActions({
-      actionSetCurrentProject: 'commitCurrentProject'
+      updateProject: 'updateProject'
     }),
 
-    setCurrentProject (project) {
+    setCurrentProject(project) {
       if (project !== undefined) {
-        this.actionSetCurrentProject(store.getters.getProject(project))
-        this.currentProject = store.state.currentProject
+        this.updateProject(this.$store.getters.getProject(project))
       }
-    },
-
-    updateIndexes() {
-      this.currentIndex = store.state.projects.findIndex(project => project.name === store.state.currentProject.name)
-      this.nextIndex = (this.currentIndex === store.state.projects.length - 1) ? 1 : this.currentIndex + 1
-    },
-
-    ticker() {
-      setInterval(() => {
-        if (this.progress < 100) {
-          this.progress += 0.2
-        } else {
-          this.updateIndexes()
-          // let currentIndex = store.state.projects.findIndex(project => project.name === store.state.currentProject.name)
-          // let nextIndex = (this.currentIndex === store.state.projects.length - 1) ? 1 : this.currentIndex + 1
-
-          router.push({ name: 'project', params: { project: store.state.projects[this.nextIndex].name } })
-        }
-      }, 10)
     }
+  },
+  computed: {
+    currentProject() {
+      return this.$store.state.currentProject
+    },
 
+    projectInfoExpanded() {
+      return this.$store.state.projectInfoExpanded
+    }
   },
   mounted() {
-    // this.updateIndexes()
-    // this.ticker()
     if (this.$route.params.project) {
       this.setCurrentProject(this.$route.params.project)
     } else {
-      this.setCurrentProject(store.state.projects[0].name)
+      this.setCurrentProject(this.$store.state.projects[0].name)
     }
   },
   components: {
     ProjectInfo
+  },
+  beforeRouteUpdate(to, from, next) {
+    if (this.projectInfoExpanded) {
+      this.$store.dispatch('toggleProjectInfoExpanded', false)
+      setTimeout(() => {
+        next()
+      }, 700)
+    } else {
+      next()
+    }
   }
 }
