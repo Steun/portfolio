@@ -38,7 +38,24 @@ export default {
   components: {
     ProjectInfo
   },
+  updated() {
+    if (this.$route.params.expanded) {
+      setTimeout(() => {
+        this.$store.dispatch('toggleProjectInfoExpanded', true)
+      }, 600)
+    }
+  },
   beforeRouteUpdate(to, from, next) {
+    if (this.projectInfoExpanded) {
+      this.$store.dispatch('toggleProjectInfoExpanded', false)
+      setTimeout(() => {
+        next()
+      }, 700)
+    } else {
+      next()
+    }
+  },
+  beforeRouteLeave(to, from, next) {
     if (this.projectInfoExpanded) {
       this.$store.dispatch('toggleProjectInfoExpanded', false)
       setTimeout(() => {

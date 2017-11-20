@@ -38,7 +38,7 @@ export default {
     currentProject() {
       this.progress = 0
       this.ticker()
-      this.$store.dispatch('toggleProjectInfoExpanded', false)
+      // this.$store.dispatch('toggleProjectInfoExpanded', false)
     }
   },
   mounted() {

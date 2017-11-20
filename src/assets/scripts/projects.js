@@ -36,15 +36,15 @@ const projects = [
     description: 'Lift is a community for mentally or physically challenged individuals. With this webapp we made it possible for them to get in touch, help and learn from each other.',
     moreInfo: true,
     moreLayoutType: 1,
-    infoTitle1: '',
-    infoText1: '',
+    infoTitle1: 'Lift boii',
+    infoText1: 'lorem ipsum dolor amet',
     infoTitle2: '',
     infoText2: ''
   },
   {
     name: 'compilex',
     title: 'Compilex',
-    subtitle: 'website and branding',
+    subtitle: 'Website and branding',
     class: 'compilex',
     black: true,
     description: false,
