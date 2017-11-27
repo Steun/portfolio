@@ -63,8 +63,8 @@ $about-width: 50vw;
 
   $btn-height: 70px;
   $btn-width: 180px;
-  $bar-color: transparentize($black, .98);
-  $bar-active-color: transparentize($black, .65);
+  $bar-color: transparent;
+  $bar-active-color: transparentize($black, .75);
 
   @extend %absolute;
   bottom: calc(1vh + #{$btn-height});
