@@ -25,8 +25,12 @@
       </transition>
     </div>
 
-    <progress :value="progress" max="100" style="position:absolute; z-index: 999"></progress>
-    <button @click="pauseToggle()" style="position:absolute; right: 0; z-index: 999">toggle slideshow</button>
+    <transition name="slide-readmore" mode="in-out">
+      <div class="button-box" v-if="currentProject.moreInfo && noProjectIsExpanded">
+        <progress :value="progress" max="100"></progress>
+        <button type="button" @click="toggleProjectInfo()" class="btn border">Read more</button>
+      </div>
+    </transition>
 
     <teun-menu></teun-menu>
 

@@ -66,15 +66,6 @@
     }
   }
 
-  .button-box {
-    @extend %absolute;
-    bottom: 6vh;
-    right: 6vw;
-    left: auto;
-    top: auto;
-    display: inline-block;
-  }
-
   .bg {
     @extend %absolute;
     @extend %no-flick;
@@ -87,7 +78,7 @@
 
   .gradient-overlay {
     @extend %absolute;
-    background: linear-gradient(23deg, transparent 0%, rgba(255, 255, 255, 0) 43%);
+    background: linear-gradient(10deg, transparent 0%, rgba(255, 255, 255, 0) 43%);
     height: 100%;
     width: 100%;
     pointer-events: none;
@@ -98,7 +89,7 @@
       background-image: url('./projects/compilex-laptop.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(23deg, transparent 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, transparent 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.lift {
@@ -106,7 +97,7 @@
       background-image: url('./projects/lift.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(23deg, $orange-red 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.projectp {
@@ -114,7 +105,7 @@
       background-image: url('http://teunkelting.nl/images/project-p-imac.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(23deg, $pink 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.compilex {
@@ -122,7 +113,7 @@
       background-image: url('./projects/compilex-laptop.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(23deg, $blue 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $blue 0%, rgba(255,255,255,0) 43%);
     }
   }
 }

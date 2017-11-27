@@ -29,19 +29,21 @@ export default {
       this.progress = 0
     },
 
-    pauseToggle() {
-      if (this.interval) {
-        this.clearTickerInterval()
-        console.log('paused')
+    toggleProjectInfo () {
+      if (this.$store.state.projectInfoExpanded) {
+        this.$store.dispatch('toggleProjectInfoExpanded', false)
       } else {
-        console.log('continueing')
-        this.ticker()
+        this.$store.dispatch('toggleProjectInfoExpanded', true)
       }
     }
   },
   computed: {
     currentProject() {
       return this.$store.state.currentProject
+    },
+
+    noProjectIsExpanded() {
+      return !this.$store.state.projectInfoExpanded
     }
   },
   watch: {

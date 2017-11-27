@@ -3,10 +3,6 @@
 
     <div class="gradient-overlay"></div>
 
-    <div class="button-box" v-if="currentProject.moreInfo">
-      <button type="button" @click="toggleProjectInfo()" class="btn border">Read more</button>
-    </div>
-
     <div id="info" v-if="currentProject.moreInfo">
       <button type="button" @click="toggleProjectInfo()" class="btn border close"><</button>
 
