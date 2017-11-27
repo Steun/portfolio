@@ -34,6 +34,7 @@ export default {
     } else {
       this.setCurrentProject(this.$store.state.projects[0].name)
     }
+    if (this.$store.state.aboutExpanded) this.$store.dispatch('toggleAboutExpanded', false)
   },
   components: {
     ProjectInfo
@@ -58,7 +59,6 @@ export default {
   },
   beforeRouteLeave(to, from, next) {
     if (this.projectInfoExpanded) {
-      this.$store.dispatch('toggleProjectInfoExpanded', false)
       setTimeout(() => {
         next()
       }, 700)
