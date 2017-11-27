@@ -6,22 +6,37 @@ export default {
   data () {
     return {
       title: 'Menu',
-      aboutIsOpen: false,
       projects: store.state.projects
+    }
+  },
+  computed: {
+    expanded() {
+      return this.$store.state.aboutExpanded
     }
   },
   methods: {
     toggleAbout () {
-      if (this.aboutIsOpen) {
-        this.aboutAnim.deactivate()
-        this.aboutIsOpen = false
+      if (this.$store.state.aboutExpanded) {
+        this.$store.dispatch('toggleAboutExpanded', false)
       } else {
-        this.aboutAnim.activate()
-        this.aboutIsOpen = true
+        this.$store.dispatch('toggleAboutExpanded', true)
       }
     }
   },
   mounted () {
     this.aboutAnim = new ActionItem('aboutSlideOut')
+
+    this.$watch('expanded', (newValue) => {
+      if (newValue) {
+        if (this.$store.state.projectInfoExpanded) {
+          this.$store.dispatch('toggleProjectInfoExpanded', false)
+        }
+        this.aboutAnim.activate()
+        this.$parent.clearTickerInterval()
+      } else {
+        this.aboutAnim.deactivate()
+        this.$parent.ticker()
+      }
+    })
   }
 }

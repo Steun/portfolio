@@ -1,5 +1,5 @@
 import ProjectInfo from '@/components/project-info/ProjectInfo'
-import {mapActions} from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'project',
@@ -31,7 +31,6 @@ export default {
   mounted() {
     if (this.$route.params.project) {
       this.setCurrentProject(this.$route.params.project)
-      this.$store.dispatch('toggleProjectInfoExpanded', true)
     } else {
       this.setCurrentProject(this.$store.state.projects[0].name)
     }
@@ -55,6 +54,7 @@ export default {
     } else {
       next()
     }
+    if (this.$store.state.aboutExpanded) this.$store.dispatch('toggleAboutExpanded', false)
   },
   beforeRouteLeave(to, from, next) {
     if (this.projectInfoExpanded) {
@@ -65,5 +65,5 @@ export default {
     } else {
       next()
     }
-  },
+  }
 }

@@ -13,7 +13,6 @@ export default {
 
     ticker() {
       this.clearTickerInterval()
-      this.progress = 0
 
       this.interval = setInterval(() => {
         if (this.progress < 100) {
@@ -27,6 +26,7 @@ export default {
 
     clearTickerInterval() {
       clearInterval(this.interval)
+      this.progress = 0
     },
 
     pauseToggle() {
@@ -46,14 +46,10 @@ export default {
   },
   watch: {
     currentProject() {
-      this.progress = 0
       this.ticker()
-      // this.$store.dispatch('toggleProjectInfoExpanded', false)
     }
   },
   mounted() {
-    this.progress = 0
-    this.clearTickerInterval()
     this.ticker()
   },
   components: {

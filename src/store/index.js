@@ -15,6 +15,7 @@ const state = {
   currentProjectIndex: 0,
   nextProjectIndex: 1,
   projectInfoExpanded: false,
+  aboutExpanded: false,
   actionGroups: actionGroups
 }
 

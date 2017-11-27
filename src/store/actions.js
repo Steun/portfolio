@@ -8,6 +8,10 @@ const actions = {
 
   toggleProjectInfoExpanded({commit}, value) {
     commit('SET_PROJECT_INFO_EXPANDED', value)
+  },
+
+  toggleAboutExpanded({commit}, value) {
+    commit('SET_ABOUT_EXPANDED', value)
   }
 }
 
