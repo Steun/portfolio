@@ -34,6 +34,7 @@ export default {
         this.$store.dispatch('toggleProjectInfoExpanded', false)
       } else {
         this.$store.dispatch('toggleProjectInfoExpanded', true)
+        this.$store.dispatch('toggleAboutExpanded', false)
       }
     }
   },
