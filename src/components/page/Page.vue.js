@@ -54,6 +54,7 @@ export default {
   mounted() {
     this.progress = 0
     this.clearTickerInterval()
+    this.ticker()
   },
   components: {
     teunMenu,
