@@ -31,6 +31,7 @@ export default {
   mounted() {
     if (this.$route.params.project) {
       this.setCurrentProject(this.$route.params.project)
+      this.$store.dispatch('toggleProjectInfoExpanded', true)
     } else {
       this.setCurrentProject(this.$store.state.projects[0].name)
     }
@@ -64,5 +65,5 @@ export default {
     } else {
       next()
     }
-  }
+  },
 }
