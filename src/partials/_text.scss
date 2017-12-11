@@ -59,6 +59,7 @@ p {
   color: $color;
   background: $background;
   cursor: pointer;
+  border-radius: 0;
   font-weight: normal;
 
   &.border {
