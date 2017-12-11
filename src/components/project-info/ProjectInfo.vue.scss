@@ -96,3 +96,40 @@
     }
   }
 }
+
+#app.mobile #info {
+  right: -85vw;
+  width: 85vw;
+  z-index: 21;
+
+  .info-inner {
+    padding: calc(6vw + 50px) 6vw 6vw;
+
+    p {
+    letter-spacing: 0;
+      font-size: .9em;
+    }
+
+    .title {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    .row {
+      flex-direction: column;
+
+      .col {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn.close {
+    padding: 25px 23px;
+    margin-top: 0;
+    margin-left: 0;
+    width: 100%;
+    background-size: 15px;
+    background-position: 23px center;
+  }
+}

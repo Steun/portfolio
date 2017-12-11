@@ -10,6 +10,7 @@
   height: 100vh;
   background: $bg;
   will-change: transform;
+  transition: width $animation-snap .3s;
 
   .name {
     font-size: $font-size;
@@ -19,6 +20,18 @@
     text-decoration: none;
     display: block;
     border-bottom: 1px solid $mystic;
+  }
+
+  .name.mobile {
+    display: none;
+    background: transparent;
+    border: 0;
+    font-size: 2.4em;
+    margin: 0 0 10vh;
+    outline: none;
+  }
+  .name.desktop {
+    display: block;
   }
 
   .menu-container {
@@ -35,6 +48,8 @@
       justify-content: flex-start;
       height: 100%;
       width: 100%;
+      opacity: 1;
+      transition: background $animation-snap .3s, opacity $animation-snap .3s;
     }
 
     .item {
@@ -70,5 +85,47 @@
     padding: 0;
     list-style: none;
     height: 100%;
+  }
+}
+
+#app.mobile #menu {
+  width: $mobile-sidemenu-width;
+  transition: all $animation-snap .5s;
+  background: transparent;
+  pointer-events: none;
+  z-index: 20;
+
+  button.mobile {
+    pointer-events: all;
+  }
+
+  .name.mobile {
+    display: block;
+  }
+  .name.desktop {
+    display: none;
+  }
+
+  .menu-container {
+
+    .menu {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &.expanded {
+    pointer-events: all;
+    background: $porcelain;
+    width: $side-menu-width;
+    transition: all $animation-snap .5s;
+    z-index: 22;
+
+
+    .menu-container .menu {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity $animation-snap .6s;
+    }
   }
 }

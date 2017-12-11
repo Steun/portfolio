@@ -17,6 +17,21 @@ const DOMelements = {
 
 export const actionGroups = {
   aboutSlideOut: {
+    menu: {
+      element: DOMelements.menu,
+      activate: {
+        translateX: '50vw',
+        duration: 730,
+        offset: 350,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        translateX: 0,
+        duration: 730,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      }
+    },
     about: {
       element: DOMelements.about,
       activate: {
@@ -64,21 +79,6 @@ export const actionGroups = {
         duration: 650,
         offset: 0,
         easing: 'easeInOutSine'
-      }
-    },
-    menu: {
-      element: DOMelements.menu,
-      activate: {
-        translateX: '50vw',
-        duration: 730,
-        offset: 350,
-        easing: 'easeInOutQuart'
-      },
-      deactivate: {
-        translateX: 0,
-        duration: 730,
-        offset: 100,
-        easing: 'easeInOutQuart'
       }
     },
     titlebox: {
@@ -193,7 +193,6 @@ export const actionGroups = {
     titlebox: {
       element: DOMelements.titlebox,
       activate: {
-        fontSize: ['100%', '70%'],
         translateX: '-4vh',
         translateY: '-8vh',
         duration: 700,
@@ -202,7 +201,6 @@ export const actionGroups = {
       },
       deactivate: {
         duration: 700,
-        fontSize: ['70%', '100%'],
         translateX: 0,
         translateY: 0,
         offset: 200,
@@ -213,7 +211,6 @@ export const actionGroups = {
       element: DOMelements.descriptionbox,
       activate: {
         duration: 700,
-        fontSize: ['100%', '80%'],
         translateX: '-4vh',
         maxWidth: '300px',
         offset: 0,
@@ -221,11 +218,61 @@ export const actionGroups = {
       },
       deactivate: {
         duration: 700,
-        fontSize: ['80%', '100%'],
         maxWidth: '600px',
         translateX: 0,
         offset: 100,
         easing: 'easeInOutQuart'
+      }
+    }
+  },
+  aboutMobile: {
+    about: {
+      element: DOMelements.about,
+      activate: {
+        translateX: '90vw',
+        duration: 700,
+        offset: 300,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        translateX: 0,
+        duration: 700,
+        offset: 100,
+        easing: 'easeInOutQuart'
+      }
+    },
+    page: {
+      element: DOMelements.page,
+      activate: {
+        translateX: '10vw',
+        duration: 500,
+        offset: 320,
+        easing: 'easeInOutSine',
+        filter: ['brightness(100%)', 'brightness(50%)']
+      },
+      deactivate: {
+        translateX: 0,
+        duration: 650,
+        offset: 0,
+        easing: 'easeInOutSine',
+        filter: ['brightness(50%)', 'brightness(100%)']
+      }
+    },
+    readMoreBtn: {
+      element: DOMelements.readMoreButton,
+      activate: {
+        translateX: '20vw',
+        opacity: 0,
+        duration: 900,
+        offset: 0,
+        easing: 'easeInOutSine'
+      },
+      deactivate: {
+        translateX: 0,
+        opacity: 1,
+        duration: 650,
+        offset: 200,
+        easing: 'easeInOutSine'
       }
     }
   }

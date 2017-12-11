@@ -17,6 +17,7 @@ $about-width: 50vw;
   color: $white;
   padding: $side-padding $side-padding 0;
   box-sizing: border-box;
+  overflow: hidden;
 
   .about-inner {
     max-width: 600px;
@@ -132,4 +133,22 @@ $about-width: 50vw;
   /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(-20px);
   opacity: 0;
+}
+
+#app.mobile {
+
+  #about {
+    width: calc(90vw - #{$mobile-sidemenu-width});
+    left: calc(-90vw + #{$mobile-sidemenu-width});
+  }
+
+  .btn-readmore {
+    $offset: 15vw;
+
+    width: calc(100% - #{$offset * 2});
+    margin: 0 $offset;
+    right: 0;
+    left: 0;
+    bottom: 30px;
+  }
 }

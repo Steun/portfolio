@@ -5,7 +5,8 @@ export default {
   props: ['currentProject'],
   data() {
     return {
-      projectInfo: undefined
+      projectInfo: undefined,
+      projectInfoMobile: undefined
     }
   },
   methods: {
@@ -24,6 +25,7 @@ export default {
   },
   mounted () {
     this.projectInfo = new ActionItem('projectInfo')
+    // this.projectInfoMobile = new ActionItem('projectInfoMobile')
 
     this.$watch('expanded', (newValue) => {
       if (newValue) {

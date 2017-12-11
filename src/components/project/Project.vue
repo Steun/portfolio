@@ -1,9 +1,9 @@
 <template>
-  <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`" @click="handleClose()">
+  <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`" @click.self="handleClose()">
     <div class="bg"></div>
     <div class="gradient-overlay"></div>
 
-    <div class="title-box">
+    <div class="title-box" @click.self="handleClose()">
       <h1 class="title">{{currentProject.title}}</h1>
       <h2 class="subtitle">{{currentProject.subtitle}}</h2>
       <div class="curlywurly">
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="description-box" v-if="currentProject.description">
+    <div class="description-box" v-if="currentProject.description" @click.self="handleClose()">
       <p class="description">{{currentProject.description}}</p>
     </div>
 

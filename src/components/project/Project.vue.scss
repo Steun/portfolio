@@ -6,6 +6,7 @@
   height: 100%;
   width: calc(100% - #{$side-menu-width});
   left: $side-menu-width;
+  transition: width $animation-snap .3s, left $animation-snap .3s;
 
   .title-box {
     @extend %absolute;
@@ -154,5 +155,44 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+#app.mobile .project {
+  left: 0;
+  width: 100%;
+  transition: width $animation-snap .3s, left $animation-snap .3s;
+
+  $left-offset: 15vw;
+
+  .title-box {
+    top: 12vh;
+    left: $left-offset;
+
+    .title {
+      font-size: 2.5em;
+      text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    }
+
+    .subtitle {
+      font-size: 1.5em;
+      text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    }
+
+    .curlywurly {
+      width: 80px;
+      margin-top: 10px;
+    }
+  }
+
+  .description-box {
+    left: $left-offset;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    letter-spacing: 0;
+    margin-right: 0;
+    width: 100%;
+    bottom: 115px;
+    font-size: .8em;
+    max-width: calc(100% - #{$left-offset * 2});
   }
 }

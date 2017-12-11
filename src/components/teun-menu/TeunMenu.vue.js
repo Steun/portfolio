@@ -6,7 +6,8 @@ export default {
   data () {
     return {
       title: 'Menu',
-      projects: store.state.projects
+      projects: store.state.projects,
+      mobileMenuExpanded: false
     }
   },
   computed: {
@@ -16,25 +17,31 @@ export default {
   },
   methods: {
     toggleAbout () {
+      this.toggleMobileMenu()
       if (this.$store.state.aboutExpanded) {
         this.$store.dispatch('toggleAboutExpanded', false)
       } else {
         this.$store.dispatch('toggleAboutExpanded', true)
       }
+    },
+
+    toggleMobileMenu () {
+      this.mobileMenuExpanded = !this.mobileMenuExpanded
     }
   },
   mounted () {
     this.aboutAnim = new ActionItem('aboutSlideOut')
+    this.aboutMobileAnim = new ActionItem('aboutMobile')
 
-    this.$watch('expanded', (newValue) => {
-      if (newValue) {
+    this.$watch('expanded', (expanded) => {
+      if (expanded) {
         if (this.$store.state.projectInfoExpanded) {
           this.$store.dispatch('toggleProjectInfoExpanded', false)
         }
-        this.aboutAnim.activate()
+        this.$store.state.mobile ? this.aboutMobileAnim.activate() : this.aboutAnim.activate()
         this.$parent.clearTickerInterval()
       } else {
-        this.aboutAnim.deactivate()
+        this.$store.state.mobile ? this.aboutMobileAnim.deactivate() : this.aboutAnim.deactivate()
         this.$parent.ticker()
       }
     })

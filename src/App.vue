@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="$store.state.mobile ? 'mobile' : 'desktop'">
     <router-view></router-view>
   </div>
 </template>
@@ -7,20 +7,13 @@
 <script>
 export default {
   name: 'app',
-  data() {
-    return {
-      mobile: false
-    }
-  },
   methods: {
     handleMobile() {
       if (window.innerWidth >= 1200) {
-        this.mobile = false
         if (this.$store.state.mobile) {
           this.$store.dispatch('setMobile', false)
         }
       } else {
-        this.mobile = true
         if (!this.$store.state.mobile) {
           this.$store.dispatch('setMobile', true)
         }
