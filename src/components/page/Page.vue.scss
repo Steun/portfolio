@@ -11,7 +11,7 @@ $about-width: 50vw;
   will-change: transform;
   background: $primary-accent;
   z-index: 1;
-  height: 100vh;
+  height: 100%;
   width: $width;
   left: -$width;
   color: $white;
@@ -55,7 +55,7 @@ $about-width: 50vw;
   will-change: transform;
   @extend %no-flick;
   @extend %absolute;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   overflow: hidden;
 }

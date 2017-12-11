@@ -71,6 +71,7 @@
 
       display: flex;
       flex-direction: row;
+      align-items: center;
       margin: -$spacing;
 
       .col {
@@ -99,7 +100,7 @@
     margin-left: -35px;
     margin-top: 30px;
     transition: all $animation-snap .2s;
-    transform: scale(0);
+    opacity: 0;
     outline: none;
 
     &:hover {

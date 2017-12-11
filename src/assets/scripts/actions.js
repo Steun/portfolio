@@ -161,14 +161,16 @@ export const actionGroups = {
     backbutton: {
       element: '#info .btn.close',
       activate: {
-        scale: [0, 1],
-        duration: 300,
-        offset: 700,
+        translateX: 0,
+        opacity: [0, 1],
+        duration: 500,
+        offset: 100,
         easing: 'easeInOutQuart'
       },
       deactivate: {
-        duration: 300,
-        scale: 0,
+        duration: 400,
+        translateX: '40px',
+        opacity: 0,
         offset: 0,
         easing: 'easeInOutQuart'
       }
@@ -212,13 +214,13 @@ export const actionGroups = {
       activate: {
         duration: 700,
         translateX: '-4vh',
-        maxWidth: '300px',
+        width: '30%',
         offset: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         duration: 700,
-        maxWidth: '600px',
+        width: ['30%', '100%'],
         translateX: 0,
         offset: 100,
         easing: 'easeInOutQuart'
@@ -235,6 +237,7 @@ export const actionGroups = {
         easing: 'easeInOutQuart'
       },
       deactivate: {
+        backgroundColor: 'transparent',
         translateX: 0,
         duration: 700,
         offset: 100,

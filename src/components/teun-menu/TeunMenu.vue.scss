@@ -7,7 +7,7 @@
 
   @extend %absolute;
   width: $side-menu-width;
-  height: 100vh;
+  height: 100%;
   background: $bg;
   will-change: transform;
   transition: width $animation-snap .3s;
