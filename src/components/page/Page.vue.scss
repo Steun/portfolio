@@ -139,7 +139,22 @@ $about-width: 50vw;
 
   #about {
     width: calc(90vw - #{$mobile-sidemenu-width});
-    left: calc(-90vw + #{$mobile-sidemenu-width});
+    left: -90vw;
+    margin-left: $mobile-sidemenu-width;
+
+    .title {
+      font-size: 2em;
+    }
+
+    .description {
+      margin-top: 5vh;
+      font-size: 1em;
+    }
+
+    .socials .link {
+      font-size: 1em;
+      margin-right: 15px;
+    }
   }
 
   .btn-readmore {

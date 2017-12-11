@@ -226,6 +226,21 @@ export const actionGroups = {
     }
   },
   aboutMobile: {
+    menu: {
+      element: DOMelements.menu,
+      activate: {
+        backgroundColor: '#fff',
+        duration: 700,
+        offset: 300,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        translateX: 0,
+        duration: 700,
+        offset: 100,
+        easing: 'easeInOutQuart'
+      }
+    },
     about: {
       element: DOMelements.about,
       activate: {
@@ -244,7 +259,7 @@ export const actionGroups = {
     page: {
       element: DOMelements.page,
       activate: {
-        translateX: '10vw',
+        translateX: '20vw',
         duration: 500,
         offset: 320,
         easing: 'easeInOutSine',

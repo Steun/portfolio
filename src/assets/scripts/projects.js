@@ -18,6 +18,24 @@ const projects = [
     infoImageShadow2: true
   },
   {
+    name: 'lift',
+    title: 'Lift',
+    subtitle: 'Social community webapp',
+    class: 'lift',
+    black: false,
+    description: 'Lift is a community for mentally or physically challenged individuals. With this WebApp we made it possible for them to get in touch, help and learn from each other.',
+    moreInfo: true,
+    moreLayoutType: 1,
+    infoTitle1: 'Lift boii',
+    infoText1: 'lorem ipsum dolor amet',
+    infoTitle2: '',
+    infoText2: '',
+    infoImageName1: 'lift/lift1.png',
+    infoImageName2: 'lift/lift3.png',
+    infoImageShadow1: true,
+    infoImageShadow2: true
+  },
+  {
     name: 'projectp',
     title: 'Project P',
     subtitle: 'Angular PWA',
@@ -34,24 +52,6 @@ const projects = [
     infoImageName2: 'project-p/project-p1.png',
     infoImageShadow1: true,
     infoImageShadow2: false
-  },
-  {
-    name: 'lift',
-    title: 'Lift',
-    subtitle: 'Social community webapp',
-    class: 'lift',
-    black: false,
-    description: 'Lift is a community for mentally or physically challenged individuals. With this webapp we made it possible for them to get in touch, help and learn from each other.',
-    moreInfo: true,
-    moreLayoutType: 1,
-    infoTitle1: 'Lift boii',
-    infoText1: 'lorem ipsum dolor amet',
-    infoTitle2: '',
-    infoText2: '',
-    infoImageName1: 'lift/lift1.png',
-    infoImageName2: 'lift/lift3.png',
-    infoImageShadow1: true,
-    infoImageShadow2: true
   },
   {
     name: 'sleepeey',
