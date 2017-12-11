@@ -1,6 +1,6 @@
 #info {
   $bg: $white;
-  $inner-offset: 3vw;
+  $inner-offset: 2vw;
   $width: 50vw;
 
   @extend %absolute;
@@ -23,7 +23,7 @@
 
     .title {
       color: $primary-accent;
-      font-size: 2em;
+      font-size: 1.8em;
     }
 
     p {
@@ -45,7 +45,7 @@
       img {
         width: auto;
         max-width: 100%;
-        max-height: 40vh;
+        max-height: 38vh;
 
         &.shadow {
           box-shadow: 0 0 35px rgba(0, 0, 0, .3);

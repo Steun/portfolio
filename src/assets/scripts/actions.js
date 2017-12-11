@@ -11,7 +11,7 @@ const DOMelements = {
   descriptionbox: '#page .description-box',
   curlywurly: '.curlywurly polyline',
   projectInfo: '#info',
-  readMoreButton: '#container .btn-readmore',
+  readMoreButton: '.btn-readmore',
   bg: '.project .bg'
 }
 
@@ -231,14 +231,13 @@ export const actionGroups = {
     menu: {
       element: DOMelements.menu,
       activate: {
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         duration: 700,
         offset: 300,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         backgroundColor: 'transparent',
-        translateX: 0,
         duration: 700,
         offset: 100,
         easing: 'easeInOutQuart'
@@ -263,17 +262,17 @@ export const actionGroups = {
       element: DOMelements.page,
       activate: {
         translateX: '20vw',
+        filter: ['brightness(100%)', 'brightness(50%)'],
         duration: 500,
         offset: 320,
-        easing: 'easeInOutSine',
-        filter: ['brightness(100%)', 'brightness(50%)']
+        easing: 'easeInOutSine'
       },
       deactivate: {
         translateX: 0,
+        filter: ['brightness(50%)', 'brightness(100%)'],
         duration: 650,
         offset: 0,
-        easing: 'easeInOutSine',
-        filter: ['brightness(50%)', 'brightness(100%)']
+        easing: 'easeInOutSine'
       }
     },
     readMoreBtn: {
@@ -296,7 +295,7 @@ export const actionGroups = {
   }
 }
 
-export function ActionItem (name) {
+export function ActionItem(name) {
   if (store.state.actionGroups[name] === undefined) {
     console.error(`Invalid Action name: '${name}'`)
     return

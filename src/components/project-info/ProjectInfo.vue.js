@@ -5,12 +5,11 @@ export default {
   props: ['currentProject'],
   data() {
     return {
-      projectInfo: undefined,
-      projectInfoMobile: undefined
+      projectInfo: undefined
     }
   },
   methods: {
-    toggleProjectInfo () {
+    toggleProjectInfo() {
       if (this.$store.state.projectInfoExpanded) {
         this.$store.dispatch('toggleProjectInfoExpanded', false)
       } else {
@@ -23,9 +22,8 @@ export default {
       return this.$store.state.projectInfoExpanded
     }
   },
-  mounted () {
+  mounted() {
     this.projectInfo = new ActionItem('projectInfo')
-    // this.projectInfoMobile = new ActionItem('projectInfoMobile')
 
     this.$watch('expanded', (newValue) => {
       if (newValue) {
