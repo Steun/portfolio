@@ -23,6 +23,15 @@ export default {
       if (this.$store.state.aboutExpanded) {
         this.$store.dispatch('toggleAboutExpanded', false)
       }
+    },
+
+    handleClose() {
+      if (this.$store.state.aboutExpanded) {
+        this.$store.dispatch('toggleAboutExpanded', false)
+      }
+      if (this.$store.state.projectInfoExpanded) {
+        this.$store.dispatch('toggleProjectInfoExpanded', false)
+      }
     }
   },
   computed: {
