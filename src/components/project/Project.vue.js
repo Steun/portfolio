@@ -17,6 +17,12 @@ export default {
       if (project !== undefined) {
         this.updateProject(this.$store.getters.getProject(project))
       }
+    },
+
+    handleAboutClose() {
+      if (this.$store.state.aboutExpanded) {
+        this.$store.dispatch('toggleAboutExpanded', false)
+      }
     }
   },
   computed: {
@@ -34,7 +40,7 @@ export default {
     } else {
       this.setCurrentProject(this.$store.state.projects[0].name)
     }
-    if (this.$store.state.aboutExpanded) this.$store.dispatch('toggleAboutExpanded', false)
+    this.handleAboutClose()
   },
   components: {
     ProjectInfo
@@ -55,7 +61,7 @@ export default {
     } else {
       next()
     }
-    if (this.$store.state.aboutExpanded) this.$store.dispatch('toggleAboutExpanded', false)
+    this.handleAboutClose()
   },
   beforeRouteLeave(to, from, next) {
     if (this.projectInfoExpanded) {

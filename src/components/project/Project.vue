@@ -1,5 +1,5 @@
 <template>
-  <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`">
+  <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`" @click="handleAboutClose()">
     <div class="bg"></div>
     <div class="gradient-overlay"></div>
 
