@@ -108,12 +108,12 @@
       background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 43%);
     }
   }
-  &.compilex {
+  &.sleepeey {
     > .bg {
-      background-image: url('./projects/compilex-laptop.jpg');
+      background-image: url('./projects/sleepeey-wallpaper.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(10deg, $blue 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, rgba($pink, 0.3) 0%, rgba(255,255,255,0) 43%);
     }
   }
 }

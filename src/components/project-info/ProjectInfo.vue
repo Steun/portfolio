@@ -4,12 +4,14 @@
     <div class="gradient-overlay"></div>
 
     <div id="info" v-if="currentProject.moreInfo">
-      <button type="button" @click="toggleProjectInfo()" class="btn border close"><</button>
+      <button type="button" @click="toggleProjectInfo()" class="btn border close"></button>
 
-      <div class="info-inner" v-if="currentProject.moreLayoutType == 1">
+      <div class="info-inner" v-if="currentProject.moreLayoutType === 1">
         <div class="row">
           <div class="col six">
-            <img src="" alt="">
+            <figure class="image-container">
+              <img :src="'/static/images/' + currentProject.infoImageName1" alt="" :class="currentProject.infoImageShadow1 ? 'shadow' : ''">
+            </figure>
           </div>
           <div class="col six">
             <h2 class="title">{{currentProject.infoTitle1}}</h2>
@@ -22,15 +24,19 @@
             <p>{{currentProject.infoText2}}</p>
           </div>
           <div class="col six">
-            <img src="" alt="">
+            <figure class="image-container">
+              <img :src="'/static/images/' + currentProject.infoImageName2" alt="" :class="currentProject.infoImageShadow2 ? 'shadow' : ''">
+            </figure>
           </div>
         </div>
       </div>
 
-      <div class="info-inner" v-if="currentProject.moreLayoutType == 2">
+      <div class="info-inner" v-if="currentProject.moreLayoutType === 2">
         <div class="row">
           <div class="col twelve">
-            <img src="" alt="">
+            <figure class="image-container">
+              <img :src="'/static/images/' + currentProject.infoImageName1" alt="" :class="currentProject.infoImageShadow1 ? 'shadow' : ''">
+            </figure>
           </div>
         </div>
         <div class="row">

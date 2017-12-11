@@ -32,6 +32,27 @@
       font-family: $medium-font;
     }
 
+    .image-container {
+      width: 100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      max-height: 40vh;
+      height: 100%;
+      margin: 0;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        max-height: 40vh;
+
+        &.shadow {
+          box-shadow: 0 0 35px rgba(0, 0, 0, .3);
+        }
+      }
+    }
+
     .row {
       $GRID_SIZES: ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve');
       $spacing: 1vw;
@@ -55,18 +76,23 @@
   }
 
   .btn.close {
-    background: $primary-accent;
+    background-color: $primary-accent;
+    background-image: url('./arrow-left.svg');
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center center;
     border: none;
-    padding: 22px 24px;
+    padding: 32px 30px;
     position: absolute;
     margin-left: -35px;
     margin-top: 30px;
-    transition: margin $animation-snap .2s;
+    transition: all $animation-snap .2s;
     transform: scale(0);
+    outline: none;
 
     &:hover {
-      margin-left: -45px;
-      transition: margin $animation-snap .2s;
+      margin-left: -30px;
+      transition: all $animation-snap .2s;
     }
   }
 }

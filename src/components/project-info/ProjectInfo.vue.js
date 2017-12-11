@@ -28,7 +28,7 @@ export default {
     this.$watch('expanded', (newValue) => {
       if (newValue) {
         this.projectInfo.activate()
-        this.$parent.$parent.clearTickerInterval()
+        this.$parent.$parent.pauseTicker()
       } else {
         this.projectInfo.deactivate()
         this.$parent.$parent.ticker()
