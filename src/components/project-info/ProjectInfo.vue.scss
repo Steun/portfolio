@@ -53,6 +53,18 @@
       }
     }
 
+    .project-link-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: $inner-offset;
+
+      .btn-project {
+        color: $white;
+      }
+    }
+
+
     .row {
       $GRID_SIZES: ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve');
       $spacing: 1vw;

@@ -29,6 +29,11 @@
             </figure>
           </div>
         </div>
+        <div class="row">
+          <div class="col twelve project-link-container" v-if="currentProject.projectLink">
+            <a :href="currentProject.projectLink" target="_blank" class="btn btn-project">View project</a>
+          </div>
+        </div>
       </div>
 
       <div class="info-inner" v-if="currentProject.moreLayoutType === 2">
@@ -43,6 +48,11 @@
           <div class="col twelve">
             <h2 class="title">{{currentProject.infoTitle1}}</h2>
             <p>{{currentProject.infoText1}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col twelve project-link-container" v-if="currentProject.projectLink">
+            <a :href="currentProject.projectLink" target="_blank" class="btn btn-project">View project</a>
           </div>
         </div>
       </div>

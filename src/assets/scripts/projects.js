@@ -15,7 +15,8 @@ const projects = [
     infoImageName1: 'default.jpg',
     infoImageName2: 'default.jpg',
     infoImageShadow1: true,
-    infoImageShadow2: true
+    infoImageShadow2: true,
+    projectLink: false
   },
   {
     name: 'lift',
@@ -33,7 +34,8 @@ const projects = [
     infoImageName1: 'lift/lift1.png',
     infoImageName2: 'lift/lift3.png',
     infoImageShadow1: true,
-    infoImageShadow2: true
+    infoImageShadow2: true,
+    projectLink: 'https://github.com/Lift-app/'
   },
   {
     name: 'projectp',
@@ -51,7 +53,8 @@ const projects = [
     infoImageName1: 'project-p/project-p2.jpg',
     infoImageName2: 'project-p/project-p1.png',
     infoImageShadow1: true,
-    infoImageShadow2: false
+    infoImageShadow2: false,
+    projectLink: 'https://github.com/Proj-P/'
   },
   {
     name: 'sleepeey',
@@ -69,7 +72,8 @@ const projects = [
     infoImageName1: 'default.jpg',
     infoImageName2: 'default.jpg',
     infoImageShadow1: true,
-    infoImageShadow2: true
+    infoImageShadow2: true,
+    projectLink: 'https://sleepeey-187920.firebaseapp.com/'
   }
 ]
 
