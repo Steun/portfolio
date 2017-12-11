@@ -26,9 +26,9 @@
     </div>
 
     <transition name="slide-readmore" mode="in-out">
-      <div class="button-box" v-if="currentProject.moreInfo && noProjectIsExpanded">
+      <div class="button-box btn-readmore" v-if="currentProject.moreInfo && noProjectIsExpanded">
         <progress :value="progress" max="100"></progress>
-        <button type="button" @click="toggleProjectInfo()" class="btn border">Read more</button>
+        <button type="button" @click="toggleProjectInfo()" @mouseover="toggleTicker()" @mouseleave="toggleTicker()" class="btn border">Read more</button>
       </div>
     </transition>
 
