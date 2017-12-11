@@ -10,7 +10,9 @@ const DOMelements = {
   titlebox: '#page .title-box',
   descriptionbox: '#page .description-box',
   curlywurly: '.curlywurly polyline',
-  projectInfo: '#info'
+  projectInfo: '#info',
+  readMoreButton: '#container .btn-readmore',
+  bg: '.project .bg'
 }
 
 export const actionGroups = {
@@ -36,10 +38,29 @@ export const actionGroups = {
         translateX: '20vw',
         duration: 900,
         offset: 320,
+        easing: 'easeInOutSine',
+        filter: ['brightness(100%)', 'brightness(50%)']
+      },
+      deactivate: {
+        translateX: 0,
+        duration: 650,
+        offset: 0,
+        easing: 'easeInOutSine',
+        filter: ['brightness(50%)', 'brightness(100%)']
+      }
+    },
+    readMoreBtn: {
+      element: DOMelements.readMoreButton,
+      activate: {
+        translateX: '20vw',
+        opacity: 0,
+        duration: 900,
+        offset: 120,
         easing: 'easeInOutSine'
       },
       deactivate: {
         translateX: 0,
+        opacity: 1,
         duration: 650,
         offset: 0,
         easing: 'easeInOutSine'
@@ -107,6 +128,21 @@ export const actionGroups = {
     }
   },
   projectInfo: {
+    bg: {
+      element: DOMelements.bg,
+      activate: {
+        filter: ['brightness(100%)', 'brightness(50%)'],
+        duration: 700,
+        offset: 200,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        filter: ['brightness(50%)', 'brightness(100%)'],
+        duration: 700,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      }
+    },
     container: {
       element: DOMelements.projectInfo,
       activate: {
@@ -157,8 +193,8 @@ export const actionGroups = {
     titlebox: {
       element: DOMelements.titlebox,
       activate: {
-        scale: 0.8,
-        translateX: '-8vw',
+        fontSize: ['100%', '70%'],
+        translateX: '-4vh',
         translateY: '-8vh',
         duration: 700,
         offset: 100,
@@ -166,7 +202,7 @@ export const actionGroups = {
       },
       deactivate: {
         duration: 700,
-        scale: 1,
+        fontSize: ['70%', '100%'],
         translateX: 0,
         translateY: 0,
         offset: 200,
@@ -177,14 +213,16 @@ export const actionGroups = {
       element: DOMelements.descriptionbox,
       activate: {
         duration: 700,
-        scale: 0.8,
-        translateX: '-8vw',
+        fontSize: ['100%', '80%'],
+        translateX: '-4vh',
+        maxWidth: '300px',
         offset: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         duration: 700,
-        scale: 1,
+        fontSize: ['80%', '100%'],
+        maxWidth: '600px',
         translateX: 0,
         offset: 100,
         easing: 'easeInOutQuart'
