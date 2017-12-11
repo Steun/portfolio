@@ -18,4 +18,7 @@ export const SET_PROJECT_INFO_EXPANDED = (state, status) => {
 export const SET_ABOUT_EXPANDED = (state, status) => {
   state.aboutExpanded = status
 }
+export const SET_MOBILE = (state, value) => {
+  state.mobile = value
+}
 

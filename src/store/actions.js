@@ -12,6 +12,10 @@ const actions = {
 
   toggleAboutExpanded({commit}, value) {
     commit('SET_ABOUT_EXPANDED', value)
+  },
+
+  setMobile({commit}, value) {
+    commit('SET_MOBILE', value)
   }
 }
 

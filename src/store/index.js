@@ -10,6 +10,7 @@ import projects from '@/assets/scripts/projects'
 Vue.use(Vuex)
 
 const state = {
+  mobile: false,
   projects: projects,
   currentProject: projects[0],
   currentProjectIndex: 0,
