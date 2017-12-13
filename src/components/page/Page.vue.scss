@@ -63,9 +63,9 @@ $about-width: 50vw;
 .button-box {
 
   $btn-height: 70px;
-  $btn-width: 180px;
+  $btn-width: 190px;
   $bar-color: transparent;
-  $bar-active-color: transparentize($black, .75);
+  $bar-active-color: transparentize($black, .85);
 
   @extend %absolute;
   bottom: calc(1vh + #{$btn-height});

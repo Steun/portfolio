@@ -22,7 +22,6 @@ $legacy_browser_support: false !default;
 
 html {
   font-family: sans-serif; /* 1 */
-  letter-spacing: .43pt;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   @if $legacy_browser_support {

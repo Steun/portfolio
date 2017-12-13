@@ -23,16 +23,18 @@ export default {
     }
   },
   mounted() {
-    this.projectInfo = new ActionItem('projectInfo')
+    this.$nextTick().then(() => {
+      this.projectInfo = new ActionItem('projectInfo')
 
-    this.$watch('expanded', (newValue) => {
-      if (newValue) {
-        this.projectInfo.activate()
-        this.$parent.$parent.pauseTicker()
-      } else {
-        this.projectInfo.deactivate()
-        this.$parent.$parent.ticker()
-      }
+      this.$watch('expanded', (newValue) => {
+        if (newValue) {
+          this.projectInfo.activate()
+          this.$parent.$parent.pauseTicker()
+        } else {
+          this.projectInfo.deactivate()
+          this.$parent.$parent.ticker()
+        }
+      })
     })
   }
 }

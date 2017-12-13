@@ -6,6 +6,7 @@ const DOMelements = {
   about: '#container #about',
   page: '#container #page',
   menu: '#container #menu',
+  menuContainer: '#menu .container',
   gradientOverlay: '#page .gradient-overlay',
   titlebox: '#page .title-box',
   descriptionbox: '#page .description-box',
@@ -161,15 +162,13 @@ export const actionGroups = {
     backbutton: {
       element: '#info .btn.close',
       activate: {
-        translateX: 0,
-        opacity: [0, 1],
-        duration: 500,
-        offset: 100,
+        opacity: 1,
+        duration: 400,
+        offset: 0,
         easing: 'easeInOutQuart'
       },
       deactivate: {
         duration: 400,
-        translateX: '40px',
         opacity: 0,
         offset: 0,
         easing: 'easeInOutQuart'
@@ -197,6 +196,7 @@ export const actionGroups = {
       activate: {
         translateX: '-4vh',
         translateY: '-8vh',
+        width: '30%',
         duration: 700,
         offset: 100,
         easing: 'easeInOutQuart'
@@ -205,6 +205,7 @@ export const actionGroups = {
         duration: 700,
         translateX: 0,
         translateY: 0,
+        width: ['30%', '100%'],
         offset: 200,
         easing: 'easeInOutQuart'
       }
@@ -225,21 +226,36 @@ export const actionGroups = {
         offset: 100,
         easing: 'easeInOutQuart'
       }
+    },
+    rows: {
+      element: '.info-inner .rows',
+      activate: {
+        duration: 600,
+        opacity: [0, 1],
+        offset: 370,
+        easing: 'easeInOutQuart'
+      },
+      deactivate: {
+        duration: 300,
+        opacity: 0,
+        offset: 0,
+        easing: 'easeInOutQuart'
+      }
     }
   },
   aboutMobile: {
     menu: {
       element: DOMelements.menu,
       activate: {
-        backgroundColor: 'white',
+        background: '#f2f2f2',
         duration: 700,
         offset: 300,
         easing: 'easeInOutQuart'
       },
       deactivate: {
-        backgroundColor: 'transparent',
-        duration: 700,
-        offset: 100,
+        background: 'rgba(255, 255, 255, 0)',
+        duration: 100,
+        offset: 0,
         easing: 'easeInOutQuart'
       }
     },

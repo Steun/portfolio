@@ -9,8 +9,8 @@
   width: $side-menu-width;
   height: 100%;
   background: $bg;
+  letter-spacing: .43px;
   will-change: transform;
-  transition: width $animation-snap .3s;
 
   .name {
     font-size: $font-size;
@@ -116,7 +116,7 @@
 
   &.expanded {
     pointer-events: all;
-    background: $porcelain;
+    background: $porcelain !important;
     width: $side-menu-width;
     transition: all $animation-snap .5s;
     z-index: 22;

@@ -29,7 +29,6 @@ $PRIMARY_FONT_WEIGHTS: (
 a,
 .link {
   text-decoration: underline;
-  letter-spacing: .43pt;
   font-family: $regular-font;
   color: $white;
 
@@ -58,6 +57,7 @@ p {
   text-decoration: none;
   color: $color;
   background: $background;
+  letter-spacing: .43px;
   cursor: pointer;
   border-radius: 0;
   border: 0;
