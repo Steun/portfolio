@@ -52,6 +52,14 @@
     }
   }
 
+  .splash-buttons {
+    position: absolute;
+    bottom: $left-offset / 2;
+    left: $left-offset;
+    display: flex;
+    justify-content: left;
+  }
+
   .description-box {
     @extend %absolute;
     top: auto;
@@ -87,15 +95,15 @@
 
   &.splash {
     > .bg {
-      background-image: url('./projects/compilex-laptop.jpg');
+      background-image: url('./projects/compilex.jpg');
     }
     > .gradient-overlay {
-      background: linear-gradient(10deg, transparent 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $black 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.lift {
     > .bg {
-      background-image: url('./projects/lift.jpg');
+      background-image: url('./projects/lift1.jpg');
     }
     > .gradient-overlay {
       background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 43%);
@@ -103,7 +111,7 @@
   }
   &.projectp {
     > .bg {
-      background-image: url('http://teunkelting.nl/images/project-p-imac.jpg');
+      background-image: url('./projects/project-p.jpg');
     }
     > .gradient-overlay {
       background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 43%);
@@ -111,7 +119,7 @@
   }
   &.sleepeey {
     > .bg {
-      background-image: url('./projects/sleepeey-wallpaper.jpg');
+      background-image: url('./projects/sleepeey.jpg');
     }
     > .gradient-overlay {
       background: linear-gradient(10deg, rgba($pink-purple, 0.3) 0%, rgba(255,255,255,0) 43%);
@@ -194,5 +202,13 @@
     bottom: 115px;
     font-size: .8em;
     max-width: calc(100% - #{$left-offset * 2});
+  }
+
+  .splash-buttons {
+    align-items: stretch;
+    left: $left-offset;
+    width: calc(100% - (#{$left-offset} * 2));
+
+    .btn { width: 100% }
   }
 }

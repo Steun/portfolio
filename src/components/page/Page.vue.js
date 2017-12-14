@@ -27,7 +27,7 @@ export default {
             })
           }
         }
-      }, 16)
+      }, 15)
     },
 
     clearTickerInterval() {

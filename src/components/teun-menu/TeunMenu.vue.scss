@@ -65,7 +65,8 @@
         box-sizing: border-box;
         width: 100%;
 
-        &.router-link-active {
+        &.router-link-active,
+        &.active {
           color: $highlight;
           transition: color $animation-snap .4s;
         }

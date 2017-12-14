@@ -14,6 +14,10 @@
       </div>
     </div>
 
+    <div v-if="currentProject.name === 'me'" class="splash-buttons">
+      <router-link :to="{ name: 'project', params: { project: $store.state.projects[1].name, expanded: false}}" class="btn border">View my projects</router-link>
+    </div>
+
     <div class="description-box" v-if="currentProject.description" @click.self="handleClose()">
       <p class="description">{{currentProject.description}}</p>
     </div>
