@@ -7,15 +7,15 @@
           <h3 class="title">Hello,</h3>
           <h3 class="title">Is it me you're looking for?</h3>
           <p class="description">
-            I'm a Frontend developer based in Haarlem, currently in my first year of Software Engineering at HvA.
+            I'm a Frontend Developer based in Haarlem, currently in my first year of Software Engineering at HvA.
           </p>
           <ul class="socials inline">
-            <li><a href="mailto:contact@teunkelting.com" class="link">email</a></li>
-            <li><a href="https://twitter.com/teunkelting" class="link">twitter</a></li>
-            <li><a href="#" class="link">linkedin</a></li>
+            <li><a href="mailto:contact@teunkelting.com" target="_blank" class="link">email</a></li>
+            <li><a href="https://twitter.com/teunkelting" target="_blank" class="link">twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/teun-kelting-99615810a/" class="link" target="_blank">linkedin</a></li>
           </ul>
         </div>
-        <p class="built-by-me">Built by me with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
+        <p class="built-by-me">Built and designed by me, with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
       </section>
     </div>
 
