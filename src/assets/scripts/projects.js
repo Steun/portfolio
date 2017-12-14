@@ -73,7 +73,7 @@ const projects = [
     infoImageName2: 'sleepeey/sleepeey2.jpg',
     infoImageShadow1: true,
     infoImageShadow2: true,
-    projectLink: 'https://sleepeey-187920.firebaseapp.com/'
+    projectLink: 'https://sleepeey.teunkelting.com/'
   }
 ]
 
