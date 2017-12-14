@@ -68,10 +68,10 @@ export const actionGroups = {
     readMoreBtn: {
       element: DOMelements.readMoreButton,
       activate: {
-        translateX: '20vw',
+        translateX: '5vw',
         opacity: 0,
         duration: 900,
-        offset: 120,
+        offset: 100,
         easing: 'easeInOutSine'
       },
       deactivate: {
@@ -294,14 +294,12 @@ export const actionGroups = {
     readMoreBtn: {
       element: DOMelements.readMoreButton,
       activate: {
-        translateX: '20vw',
         opacity: 0,
         duration: 900,
         offset: 0,
         easing: 'easeInOutSine'
       },
       deactivate: {
-        translateX: 0,
         opacity: 1,
         duration: 650,
         offset: 200,
