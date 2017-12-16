@@ -16,7 +16,9 @@ const projects = [
     infoImageName2: 'default.jpg',
     infoImageShadow1: true,
     infoImageShadow2: true,
-    projectLink: false
+    projectLink: false,
+    projectImageCompressed: './compilex/compilex-min.jpg',
+    projectImage: './compilex/compilex.jpg'
   },
   {
     name: 'lift',
@@ -35,7 +37,9 @@ const projects = [
     infoImageName2: 'lift/lift3.png',
     infoImageShadow1: true,
     infoImageShadow2: true,
-    projectLink: 'https://github.com/Lift-app/'
+    projectLink: 'https://github.com/Lift-app/',
+    projectImageCompressed: './lift/lift1-min.jpg',
+    projectImage: './lift/lift1.jpg'
   },
   {
     name: 'projectp',
@@ -54,7 +58,9 @@ const projects = [
     infoImageName2: 'project-p/project-p1.png',
     infoImageShadow1: true,
     infoImageShadow2: false,
-    projectLink: 'https://github.com/Proj-P/'
+    projectLink: 'https://github.com/Proj-P/',
+    projectImageCompressed: './project-p/project-p-min.jpg',
+    projectImage: './project-p/project-p.jpg'
   },
   {
     name: 'sleepeey',
@@ -73,7 +79,9 @@ const projects = [
     infoImageName2: 'sleepeey/sleepeey2.jpg',
     infoImageShadow1: true,
     infoImageShadow2: true,
-    projectLink: 'https://sleepeey.teunkelting.com/'
+    projectLink: 'https://sleepeey.teunkelting.com/',
+    projectImageCompressed: './sleepeey/sleepeey-min.jpg',
+    projectImage: './sleepeey/sleepeey.jpg'
   }
 ]
 

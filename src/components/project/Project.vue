@@ -1,6 +1,6 @@
 <template>
   <div class="project" :class="`${currentProject.class} ${currentProject.black ? 'theme-black' : 'theme-white'}`" @click.self="handleClose()">
-    <div class="bg"></div>
+    <img class="project-image" :src="'/static/images/' + currentProject.projectImage" :srcset="'/static/images/' + currentProject.projectImageCompressed + ' 2x'">
     <div class="gradient-overlay"></div>
 
     <div class="title-box" @click.self="handleClose()">

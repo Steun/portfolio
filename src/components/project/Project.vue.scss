@@ -75,14 +75,15 @@
     }
   }
 
-  .bg {
+  .project-image {
     @extend %absolute;
     @extend %no-flick;
     height: 100%;
-    width: 100vw;
-    background-size: cover;
-    animation: scalefade ease 4s;
+    width: 100%;
+    animation: scalefade ease 5s;
     pointer-events: none;
+    object-fit: cover;
+    object-position: top center;
   }
 
   .gradient-overlay {
@@ -94,33 +95,21 @@
   }
 
   &.splash {
-    > .bg {
-      background-image: url('./projects/compilex.jpg');
-    }
     > .gradient-overlay {
       background: linear-gradient(10deg, $black 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.lift {
-    > .bg {
-      background-image: url('./projects/lift1.jpg');
-    }
     > .gradient-overlay {
       background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.projectp {
-    > .bg {
-      background-image: url('./projects/project-p.jpg');
-    }
     > .gradient-overlay {
       background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 43%);
     }
   }
   &.sleepeey {
-    > .bg {
-      background-image: url('./projects/sleepeey.jpg');
-    }
     > .gradient-overlay {
       background: linear-gradient(10deg, rgba($pink-purple, 0.3) 0%, rgba(255,255,255,0) 43%);
     }
