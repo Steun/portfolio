@@ -1,3 +1,5 @@
+@import "@/assets/styles/app.scss";
+
 .project {
 
   $left-offset: 8vw;
@@ -63,14 +65,14 @@
   .description-box {
     @extend %absolute;
     top: auto;
-    bottom: 10vh;
+    bottom: 5vh;
     left: $left-offset;
     max-width: 600px;
     margin-right: 300px;
     animation: fade $animation-curve 1s;
 
     .description {
-      font-size: 1.4em;
+      font-size: 1.3em;
       line-height: 1.4;
     }
   }
@@ -88,7 +90,7 @@
 
   .gradient-overlay {
     @extend %absolute;
-    background: linear-gradient(10deg, transparent 0%, rgba(255, 255, 255, 0) 43%);
+    background: linear-gradient(10deg, transparent 0%, rgba(255, 255, 255, 0) 53%);
     height: 100%;
     width: 100%;
     pointer-events: none;
@@ -96,22 +98,27 @@
 
   &.splash {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $black 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $black 0%, rgba(255,255,255,0) 53%);
     }
   }
   &.lift {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 53%);
     }
   }
   &.projectp {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 53%);
     }
   }
   &.sleepeey {
     > .gradient-overlay {
-      background: linear-gradient(10deg, rgba($pink-purple, 0.3) 0%, rgba(255,255,255,0) 43%);
+      background: linear-gradient(10deg, rgba($pink-purple, 0.3) 0%, rgba(255,255,255,0) 53%);
+    }
+  }
+  &.haphap {
+    > .gradient-overlay {
+      background: linear-gradient(10deg, rgba($blue, .5) 0%, rgba(255,255,255,0) 53%);
     }
   }
 }

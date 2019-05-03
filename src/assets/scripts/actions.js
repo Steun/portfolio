@@ -177,8 +177,8 @@ export const actionGroups = {
     gradientOverlay: {
       element: DOMelements.gradientOverlay,
       activate: {
-        translateY: '20vh',
-        opacity: 0,
+        translateY: '10vh',
+        opacity: .8,
         duration: 700,
         offset: 0,
         easing: 'easeInOutQuart'

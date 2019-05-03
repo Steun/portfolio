@@ -9,7 +9,7 @@
       </div>
 
       <ul class="menu">
-        <li class="item" v-for="p in projects" v-if="p.name !== projects[0].name">
+        <li class="item" v-for="p in projects" v-if="p.name !== projects[0].name" v-bind:key="p.name">
           <router-link :to="{ name: 'project', params: { project: p.name, expanded: true } }" class="item" v-on:click.native="toggleMobileMenu()">{{ p.title }}</router-link>
         </li>
         <li class="item">

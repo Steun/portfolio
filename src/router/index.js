@@ -7,6 +7,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history', // This removes the trailing # on the URL
+  base: process.env.BASE_URL,
   routes: [
     {
       path: '/',

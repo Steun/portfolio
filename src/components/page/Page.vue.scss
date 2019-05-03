@@ -1,3 +1,5 @@
+@import "@/assets/styles/app.scss";
+
 $about-width: 50vw;
 
 #about {
@@ -65,7 +67,7 @@ $about-width: 50vw;
   $btn-height: 70px;
   $btn-width: 190px;
   $bar-color: transparent;
-  $bar-active-color: transparentize($black, .85);
+  $bar-active-color: transparentize($black, .75);
 
   @extend %absolute;
   bottom: calc(1vh + #{$btn-height});
@@ -101,7 +103,9 @@ $about-width: 50vw;
     width: 100%;
     height: 100%;
     position: absolute;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:focus {
       outline: transparent;

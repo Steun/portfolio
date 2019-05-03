@@ -7,7 +7,7 @@
           <h3 class="title">Hello,</h3>
           <h3 class="title">Is it me you're looking for?</h3>
           <p class="description">
-            I'm a Frontend Developer based in Haarlem, currently in my first year of Software Engineering at HvA.
+            I'm a Frontend Developer based in Haarlem, currently in my second year of Software Engineering at HvA.
           </p>
           <ul class="socials inline">
             <li><a href="mailto:contact@teunkelting.com" target="_blank" class="link">email</a></li>

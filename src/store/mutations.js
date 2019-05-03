@@ -2,7 +2,7 @@ export const SET_CURRENT_PROJECT = (state, project) => {
   state.currentProject = project
 }
 
-export const SET_CURRENT_PROJECT_INDEX = (state, project) => {
+export const SET_CURRENT_PROJECT_INDEX = (state) => {
   state.currentProjectIndex = state.projects.findIndex(project => project.name === state.currentProject.name)
 }
 

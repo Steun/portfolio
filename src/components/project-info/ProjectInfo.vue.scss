@@ -1,3 +1,5 @@
+@import "@/assets/styles/app.scss";
+
 #info {
   $bg: $white;
   $inner-offset: 2vw;
@@ -28,6 +30,7 @@
 
     p {
       font-size: 1em;
+      white-space: pre-line;
       line-height: 1.5;
       font-family: $medium-font;
     }

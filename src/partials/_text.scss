@@ -1,5 +1,5 @@
 // Fonts
-$font-path: '~/static/fonts/'; // Path to the fonts folder
+$font-path: '~/fonts/'; // Path to the fonts folder
 $primary-font-name: 'Graphik'; // Name that will be used for the font
 
 // All the weights of the font, used for finding files with the same name, and applying correct font-weight
@@ -81,7 +81,7 @@ p {
 .subtitle {
   @extend .title;
   margin: 0;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 // Lists
