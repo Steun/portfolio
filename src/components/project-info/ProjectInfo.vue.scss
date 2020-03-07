@@ -69,6 +69,43 @@
       }
     }
 
+    .project-technologies-container {
+
+      .technologies-title {
+        color: $primary-accent;
+      }
+
+      .technologies {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .technology {
+          list-style: none;
+          padding: 8px 16px;
+          background-color: $mystic;
+          margin: 0 5px 5px 0;
+          flex-grow: 2;
+          max-width: 25%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $pantzer;
+          font-family: $medium-font;
+          font-size: .95em;
+          transition: ease .2s;
+
+          &:hover {
+            background-color: darken($mystic, 5%);
+            transition: ease .2s;
+          }
+        }
+      }
+    }
+
 
     .row {
       $GRID_SIZES: ('one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve');

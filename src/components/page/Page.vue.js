@@ -18,7 +18,7 @@ export default {
       this.interval = setInterval(() => {
         if (this.playing) {
           if (this.progress < 100) {
-            this.progress += 0.2
+            this.progress += 0.5
           } else {
             this.progress = 0
             this.$router.push({

@@ -1,14 +1,13 @@
 @import "@/assets/styles/app.scss";
 
 .project {
-
   $left-offset: 8vw;
 
   position: absolute;
   height: 100%;
   width: calc(100% - #{$side-menu-width});
   left: $side-menu-width;
-  transition: width $animation-snap .3s, left $animation-snap .3s;
+  transition: width $animation-snap 0.3s, left $animation-snap 0.3s;
 
   .title-box {
     @extend %absolute;
@@ -90,7 +89,11 @@
 
   .gradient-overlay {
     @extend %absolute;
-    background: linear-gradient(10deg, transparent 0%, rgba(255, 255, 255, 0) 53%);
+    background: linear-gradient(
+      10deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0) 53%
+    );
     height: 100%;
     width: 100%;
     pointer-events: none;
@@ -98,27 +101,39 @@
 
   &.splash {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $black 0%, rgba(255,255,255,0) 53%);
+      background: linear-gradient(10deg, $black 0%, rgba(255, 255, 255, 0) 53%);
     }
   }
   &.lift {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $orange-red 0%, rgba(255,255,255,0) 53%);
+      background: linear-gradient(
+        10deg,
+        $orange-red 0%,
+        rgba(255, 255, 255, 0) 53%
+      );
     }
   }
   &.projectp {
     > .gradient-overlay {
-      background: linear-gradient(10deg, $pink 0%, rgba(255,255,255,0) 53%);
+      background: linear-gradient(10deg, $pink 0%, rgba(255, 255, 255, 0) 53%);
     }
   }
   &.sleepeey {
     > .gradient-overlay {
-      background: linear-gradient(10deg, rgba($pink-purple, 0.3) 0%, rgba(255,255,255,0) 53%);
+      background: linear-gradient(
+        10deg,
+        rgba($pink-purple, 0.3) 0%,
+        rgba(255, 255, 255, 0) 53%
+      );
     }
   }
   &.haphap {
     > .gradient-overlay {
-      background: linear-gradient(10deg, rgba($blue, .5) 0%, rgba(255,255,255,0) 53%);
+      background: linear-gradient(
+        10deg,
+        rgba($blue, 0.5) 0%,
+        rgba(255, 255, 255, 0) 53%
+      );
     }
   }
 }
@@ -165,7 +180,7 @@
 #app.mobile .project {
   left: 0;
   width: 100%;
-  transition: width $animation-snap .3s, left $animation-snap .3s;
+  transition: width $animation-snap 0.3s, left $animation-snap 0.3s;
 
   $left-offset: 15vw;
 
@@ -175,12 +190,12 @@
 
     .title {
       font-size: 2.5em;
-      text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     }
 
     .subtitle {
       font-size: 1.5em;
-      text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+      text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     }
 
     .curlywurly {
@@ -191,12 +206,12 @@
 
   .description-box {
     left: $left-offset;
-    text-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     letter-spacing: 0;
     margin-right: 0;
     width: 100%;
     bottom: 115px;
-    font-size: .8em;
+    font-size: 0.8em;
     max-width: calc(100% - #{$left-offset * 2});
   }
 
@@ -205,6 +220,8 @@
     left: $left-offset;
     width: calc(100% - (#{$left-offset} * 2));
 
-    .btn { width: 100% }
+    .btn {
+      width: 100%;
+    }
   }
 }

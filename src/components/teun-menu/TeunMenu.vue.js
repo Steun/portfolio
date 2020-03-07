@@ -1,49 +1,57 @@
-import { ActionItem } from '@/assets/scripts/actions'
-import store from '@/store'
+import { ActionItem } from "@/assets/scripts/actions";
+import store from "@/store";
 
 export default {
-  name: 'teunMenu',
-  data () {
+  name: "teunMenu",
+  data() {
     return {
-      title: 'Menu',
+      title: "Menu",
       projects: store.state.projects,
       mobileMenuExpanded: false
-    }
+    };
   },
   computed: {
     expanded() {
-      return this.$store.state.aboutExpanded
+      return this.$store.state.aboutExpanded;
+    },
+
+    filteredProjects() {
+      return this.projects.filter(p => p.name !== this.projects[0].name);
     }
   },
   methods: {
-    toggleAbout () {
-      this.toggleMobileMenu()
+    toggleAbout() {
+      this.toggleMobileMenu();
       if (this.$store.state.aboutExpanded) {
-        this.$store.dispatch('toggleAboutExpanded', false)
+        this.$store.dispatch("toggleAboutExpanded", false);
       } else {
-        this.$store.dispatch('toggleAboutExpanded', true)
+        this.$store.dispatch("toggleAboutExpanded", true);
       }
     },
 
-    toggleMobileMenu () {
-      this.mobileMenuExpanded = !this.mobileMenuExpanded
+    toggleMobileMenu() {
+      this.mobileMenuExpanded = !this.mobileMenuExpanded;
     }
   },
-  mounted () {
-    this.aboutAnim = new ActionItem('aboutSlideOut')
-    this.aboutMobileAnim = new ActionItem('aboutMobile')
+  mounted() {
+    this.aboutAnim = new ActionItem("aboutSlideOut");
+    this.aboutMobileAnim = new ActionItem("aboutMobile");
 
-    this.$watch('expanded', (expanded) => {
+    this.$watch("expanded", expanded => {
       if (expanded) {
         if (this.$store.state.projectInfoExpanded) {
-          this.$store.dispatch('toggleProjectInfoExpanded', false)
+          this.$store.dispatch("toggleProjectInfoExpanded", false);
         }
-        this.$store.state.mobile ? this.aboutMobileAnim.activate() : this.aboutAnim.activate()
-        this.$parent.clearTickerInterval()
+        this.$store.state.mobile
+          ? this.aboutMobileAnim.activate()
+          : this.aboutAnim.activate();
+        this.$parent.clearTickerInterval();
       } else {
-        this.$store.state.mobile ? this.aboutMobileAnim.deactivate() : this.aboutAnim.deactivate()
-        this.$parent.ticker()
+        this.$store.state.mobile
+          ? this.aboutMobileAnim.deactivate()
+          : this.aboutAnim.deactivate();
+        this.$parent.ticker();
       }
-    })
+    });
   }
-}
+};

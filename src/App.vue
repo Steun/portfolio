@@ -6,29 +6,29 @@
 
 <script>
 export default {
-  name: 'app',
+  name: "app",
   methods: {
     handleMobile() {
       if (window.innerWidth >= 1200) {
         if (this.$store.state.mobile) {
-          this.$store.dispatch('setMobile', false)
+          this.$store.dispatch("setMobile", false);
         }
       } else {
         if (!this.$store.state.mobile) {
-          this.$store.dispatch('setMobile', true)
+          this.$store.dispatch("setMobile", true);
         }
       }
     }
   },
   mounted() {
     this.$nextTick(() => {
-      window.addEventListener('resize', () => {
-        this.handleMobile()
-      })
-      this.handleMobile()
-    })
+      window.addEventListener("resize", () => {
+        this.handleMobile();
+      });
+      this.handleMobile();
+    });
   }
-}
+};
 </script>
 
 <style src="./App.vue.scss" lang="scss"></style>

@@ -13,3 +13,4 @@ yarn-error.log*
 *.sln
 
 !.idea/codeStyleSettings.xml
+.firebase

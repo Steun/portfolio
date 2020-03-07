@@ -1,55 +1,55 @@
-import ProjectInfo from '@/components/project-info/ProjectInfo'
-import { mapActions } from 'vuex'
+import ProjectInfo from "@/components/project-info/ProjectInfo";
+import { mapActions } from "vuex";
 
 export default {
-  name: 'project',
+  name: "project",
   data() {
     return {
       progress: 0
-    }
+    };
   },
   methods: {
     ...mapActions({
-      updateProject: 'updateProject'
+      updateProject: "updateProject"
     }),
 
     setCurrentProject(project) {
       if (project !== undefined) {
-        this.updateProject(this.$store.getters.getProject(project))
+        this.updateProject(this.$store.getters.getProject(project));
       }
     },
 
     handleAboutClose() {
       if (this.$store.state.aboutExpanded) {
-        this.$store.dispatch('toggleAboutExpanded', false)
+        this.$store.dispatch("toggleAboutExpanded", false);
       }
     },
 
     handleClose() {
       if (this.$store.state.aboutExpanded) {
-        this.$store.dispatch('toggleAboutExpanded', false)
+        this.$store.dispatch("toggleAboutExpanded", false);
       }
       if (this.$store.state.projectInfoExpanded) {
-        this.$store.dispatch('toggleProjectInfoExpanded', false)
+        this.$store.dispatch("toggleProjectInfoExpanded", false);
       }
     }
   },
   computed: {
     currentProject() {
-      return this.$store.state.currentProject
+      return this.$store.state.currentProject;
     },
 
     projectInfoExpanded() {
-      return this.$store.state.projectInfoExpanded
+      return this.$store.state.projectInfoExpanded;
     }
   },
   mounted() {
     if (this.$route.params.project) {
-      this.setCurrentProject(this.$route.params.project)
+      this.setCurrentProject(this.$route.params.project);
     } else {
-      this.setCurrentProject(this.$store.state.projects[0].name)
+      this.setCurrentProject(this.$store.state.projects[0].name);
     }
-    this.handleAboutClose()
+    this.handleAboutClose();
   },
   components: {
     ProjectInfo
@@ -57,28 +57,28 @@ export default {
   updated() {
     if (this.$route.params.expanded) {
       setTimeout(() => {
-        this.$store.dispatch('toggleProjectInfoExpanded', true)
-      }, 600)
+        this.$store.dispatch("toggleProjectInfoExpanded", true);
+      }, 600);
     }
   },
   beforeRouteUpdate(to, from, next) {
     if (this.projectInfoExpanded) {
-      this.$store.dispatch('toggleProjectInfoExpanded', false)
+      this.$store.dispatch("toggleProjectInfoExpanded", false);
       setTimeout(() => {
-        next()
-      }, 700)
+        next();
+      }, 700);
     } else {
-      next()
+      next();
     }
-    this.handleAboutClose()
+    this.handleAboutClose();
   },
   beforeRouteLeave(to, from, next) {
     if (this.projectInfoExpanded) {
       setTimeout(() => {
-        next()
-      }, 700)
+        next();
+      }, 700);
     } else {
-      next()
+      next();
     }
   }
-}
+};
