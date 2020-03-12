@@ -107,12 +107,12 @@ const projects = [
       "We had to find a reliable way of knowing if the toilet is actually occupied or not, and we figured that the door lock would be the best place to get reliable data from. A Raspberry Pi 3, hooked up to a magnetic switch positioned in the doorpost with a tiny magnet on the doorlock pin is how we pulled it off. The Raspberry Pi with a bit of Python software is connected to an API. I use the API to show all the data in the Progressive Web App. Another neat thing is that we've implemented WebSockets. This means that you don't have to refresh the page to see whether the toilet status has changed.",
     infoTitle2: "The result",
     infoText2:
-      "The result is a responsive Progressive Angular Web App that works with an API connected to the Raspberry Pi. This project was a great learning experience for me, especially because we did everything ourselves. The hardware: soldering wires and making circuits, the backend: building robust sensor software and a well-documented API, and the frontend: the Web App.",
+      "The result is a responsive Progressive Angular Web App that works with an API connected to the Raspberry Pi. This project was a great learning experience for me, especially because we did everything ourselves. The hardware: soldering wires and making circuits, the backend: building robust sensor software and a well-documented API, and the frontend: the Web App.\n\nTake a look at the code that makes it happen here: https://github.com/Proj-P/",
     infoImageName1: "images/project-p/project-p2.jpg",
     infoImageName2: "images/project-p/project-p1.png",
     infoImageShadow1: true,
     infoImageShadow2: false,
-    projectLink: "https://github.com/Proj-P/",
+    projectLink: "https://project-p.tjuna.dev/",
     projectImageCompressed: "images/project-p/project-p-min.jpg",
     projectImage: "images/project-p/project-p.jpg",
     technologies: [
