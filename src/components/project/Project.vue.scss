@@ -100,8 +100,11 @@
   }
 
   &.splash {
+    .title-box {
+      top: 30vh;
+    }
     > .gradient-overlay {
-      background: linear-gradient(10deg, $black 0%, rgba(255, 255, 255, 0) 53%);
+      background: linear-gradient(10deg, $black 0%, rgba(255, 255, 255, 0) 33%);
     }
   }
   &.lift {

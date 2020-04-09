@@ -4,7 +4,7 @@ const projects = [
     title: "Teun Kelting",
     subtitle: "Webdeveloper",
     class: "splash",
-    black: true,
+    black: false,
     description: false,
     moreInfo: false,
     moreLayoutType: 1, // 1 for 2 rows and 2 columns, 2 for 2 rows
@@ -17,8 +17,8 @@ const projects = [
     infoImageShadow1: true,
     infoImageShadow2: true,
     projectLink: false,
-    projectImageCompressed: "images/compilex/compilex-min.jpg",
-    projectImage: "images/compilex/compilex.jpg",
+    projectImageCompressed: "images/teun/result-min.jpg",
+    projectImage: "images/teun/result.jpg",
     technologies: []
   },
   {
